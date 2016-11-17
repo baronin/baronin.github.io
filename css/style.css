@@ -10,7 +10,7 @@ html, body {
 body {
     background: #E7E7E7;
     border-top: 10px solid black;
-	font-family:  Lucida Sans Unicode, Lucida Grande, sans-serif;
+	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
 }
 
 /* Дополнительные настройки */
@@ -57,36 +57,34 @@ nav>a{
     display: block;
     float: left;
     font-family: sansus;
-	font-weight: bold;
-    font-size: 15px;
+    font-size: 18px;
     color: #040404;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 66px 10px 10px 10px;
+    padding: 64px 10px 10px 10px;
     
     transition: all 1s ease;
 }
 
 nav>a:hover, nav>a.active{
     background: #040404;
-    color: #FDFDFD;
+    color: grey;
 }
 
 /* Slider */
 
 #slider {
-    margin-top: 14px;
+    margin-top: 15px;
     position: relative;
+    background-image: url(../img/1.jpg);
 }
 
 
-#slider>.for-bigPhoto{
-	position:relative;
+#slider>.for-bigPhoto {
     width: 65%; height: 420px;
     background: no-repeat center;
     background-size: cover;
     float: left;
-	background-image: url(../img/1.jpg);
 }
 
 #slider>.for-sliderInfo {
@@ -94,7 +92,7 @@ nav>a:hover, nav>a.active{
     box-sizing: border-box;
     padding: 50px;
     float: left;
-    background: #040404;
+    background: black;
 }
 
 #slider>.for-sliderInfo>.for-sliderProperty {
@@ -120,10 +118,8 @@ nav>a:hover, nav>a.active{
 
 #slider>.for-sliderInfo>.for-sliderProperty>li>span{
     color: white;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    font-family: Lucia Console, Monaco5, monospace;
     font-size: 12px;
-	padding: 0 0 5px 0;
-	
 }
 
 #slider>.for-sliderInfo>.for-sliderProperty>li>span:nth-of-type(1) {
@@ -142,7 +138,7 @@ nav>a:hover, nav>a.active{
 
 #slider>.for-sliderInfo>.for-totalInfo{
     color: white;
-    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    font-family: Lucia Console, Monaco5, monospace;
     font-size: 26px;
     font-weight: bold;
     margin-top: 10px;
@@ -169,12 +165,12 @@ nav>a:hover, nav>a.active{
     width: 12px; height: 12px;
     border: 1px solid transparent;
     border-radius: 50%;
-    background: #27271D;
+    background: grey;
     margin-right: 5px;
 }
 
 #slider>.for-sliderInfo>.for-sliderBtns>li>a:hover, #slider>.for-sliderInfo>.for-sliderBtns>li>a.active {
-    background: #FF8F00;
+    background: silver;
 }
 
 #slider>.for-sliderInfo>.for-more{
@@ -185,12 +181,12 @@ nav>a:hover, nav>a.active{
 	font-size: 16px;
 	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
 	text-decoration: none;
-	background: #FF8F00;
+	background: grey;
 	padding: 6px 10px;
 }
 
 #slider>.for-sliderInfo>.for-more:hover{
-	background: #e27e00;
+	background: silver;
 }
 
 /* PARTS */
@@ -313,7 +309,7 @@ article>.for-info>.for-date>span{
 	color:white;
 	font-size: 12px;
 	display:inline-block;
-	background: #FF8F00;
+	background: #00CCFF;
 	padding: 5px 10px;
 }
 
@@ -323,7 +319,7 @@ footer {
 	position: relative;
 	background: #040404;
 	padding: 5px 10px;
-	margin: 20px 0	;
+	margin: 0 0 20px 0;
 	font-size: 13px;
 }
 
