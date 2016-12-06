@@ -1,0 +1,319 @@
+@charset "UTF-8";
+@import "fonts";
+@import "settings";
+
+section#top{
+  position: relative;
+  height: 100vh;
+  background: no-repeat center 0 / cover;
+  background-attachment:fixed;
+
+
+  &>.wr{
+    @extend %flex;
+    height: 100%;
+
+    header{
+      @extend %flex;
+      flex-basis: 100%;
+      align-self: flex-start;
+      justify-content:space-between;
+
+      .logo{
+        display: block;
+        width: 140px;
+        height: 74px;
+        background: url(../img/logo.png);
+      }
+      nav{
+        ul{
+            @extend %ul, %flex;
+          margin-top:20px;
+
+          li{
+            margin-left: 30px;
+
+            a{
+              color: $darkGrey;
+              font-family: $Montserrat;
+              font-size: 14px;
+              font-weight: 400;
+              text-transform: uppercase;
+              text-decoration: none;
+
+              &:hover{
+                color: $red;
+              }
+            }
+
+            &.social{
+              a{
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+                background: url("../img/Social-Icons.png") no-repeat;
+                @include addPrefix(filter, grayscale(100%));
+                transition: 0.3s;
+
+                &:hover {
+                  @include addPrefix(filter, grayscale(0));
+                }
+
+
+                &.tw{
+                  background-position: 0 0;
+                }
+                &.fb{
+                  background-position: 100% 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sloganCont {
+      max-width: 58%;
+
+      h1{
+        font-family: $Montserrat;
+        font-size: 48px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+
+        color: $grey;
+      }
+      h4{
+        position: relative;
+        color: $grey;
+        font-family: $Opensans;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 40px;
+        margin: 20px 0 60px 0;
+      }
+      .btn{
+        position: relative;
+        display: block;
+        text-decoration: none;
+        margin-top: 15px;
+
+        span{
+          color: white;
+          font-family: $Opensans;
+          font-size: 15px;
+          font-weight: 700;
+          padding: 25px 35px;
+          background-color: $red;
+          border-radius: 7px;
+          text-transform: uppercase;
+        }
+
+      }
+    }
+  }
+
+
+}
+
+section#snippets {
+  position: relative;
+
+    &>.wr{
+      &>ul{
+        @extend %ul, %flex;
+        margin: 80px 0;
+
+        li{
+          width:(100% / 3);
+          box-sizing: border-box;
+          padding-right: 55px;
+
+          h3{
+            font-family: Montserrat;
+            font-size: 26px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $grey;
+          }
+
+          .descr{
+            color: $lightgrey;
+            font-family: $Opensans;
+            font-size: 15px;
+            font-weight: 400;
+          }
+
+          .more{
+
+          }
+
+        }
+      }
+    }
+}
+
+section#portfolio {
+  margin: 80px 0;
+
+  &>.wr {
+    @extend %flex;
+    justify-content: space-between;
+
+    & > .col {
+      width: 49%;
+
+      &:first-of-type {
+        img {
+          max-width: 100%;
+        }
+      }
+      &:nth-of-type(2){
+        align-self: center;
+      }
+
+      h2 {
+        font-family: Montserrat;
+        font-size: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $grey;
+        margin: 0;
+
+      }
+      h4{
+        color: $grey;
+        font-family: $Opensans;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .descr{
+        color: $lightgrey;
+        font-family: $Opensans;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+
+section#team {
+  & > .wr {
+    & > .row1 {
+      h2 {
+        color: $grey;
+        font-family: $Montserrat;
+        font-size: 32px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      h3 {
+        color: $lightgrey;
+        font-family: $Opensans;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+    & > .row2 {
+      @extend %flex, %ul;
+      margin-top: 30px;
+
+      li {
+        @extend %flex;
+        width: (100% / 3);
+        padding-right: 35px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        .col1 {
+          width: 128px;
+          height: 128px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          background: no-repeat center / cover;
+        }
+        .col2 {
+          width: calc(100% - 128px);
+          padding-left: 20px;
+          box-sizing: border-box;
+
+          h3 {
+            color: $grey;
+            font-family: $Montserrat;
+            font-size: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0;
+          }
+          h4 {
+            color: $red;
+            font-family: $Opensans;
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0;
+          }
+          .descr {
+            color: $lightgrey;
+            font-family: $Opensans;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+  footer {
+    @extend .wr, %flex;
+    justify-content: space-between;;
+    align-items: center;
+    margin-top: 80px;
+    min-height: 90px;
+    border-top: 1px solid #e6eaed;
+
+    .col1 {
+      a {
+        display: inline-block;
+        width: 21px;
+        height: 21px;
+        margin-right: 20px;
+        background: url(../img/Social-Icons2.png) no-repeat 0 center;
+        opacity: 0.8;
+
+        &.tw {
+          background-position-x: 0;
+        }
+        &.ins {
+          background-position-x: 36%;
+        }
+        &.fb {
+          background-position-x: 68%;
+        }
+        &.gp {
+          background-position-x: 100%;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .col2 {
+      color: $lightgrey;
+      font-family: $Opensans;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+
