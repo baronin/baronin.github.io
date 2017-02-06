@@ -4,11 +4,17 @@ $maw: 940px;
 
 $Montserrat: 'Montserrat', sans-serif;
 $Opensans: 'Open Sans', sans-serif;
+$Ubuntu: 'Ubuntu', sans-serif;
+$Pangolin: 'Pangolin', cursive;
+$Roboto: 'Roboto Condensed', sans-serif;
+$Indie: 'Indie Flower', cursive;
 
 $red: #fa5c65;
 $darkGrey: #263742;
 $grey: #314a5b;
 $lightgrey: #9aa0ab;
+$yellow: #F4D418;
+$white:#F0F4F3;
 
 $prefixes: "-webkit-", "-o-", "-moz-", "-ms-";
 
@@ -38,6 +44,14 @@ html, body {
 
 .red {
   color: $red;
+}
+
+.orange {
+  color: orange;
+}
+
+.yellow {
+  color: yellow;
 }
 
 .more {

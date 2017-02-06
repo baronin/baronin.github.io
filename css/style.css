@@ -1,12 +1,13 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&amp;subset=cyrillic,cyrillic-ext");
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   min-height: 100%; }
 
-section#top > .wr, section#top > footer, section#top > .wr header, section#top > footer header, section#top > .wr header nav ul, section#top > footer header nav ul, section#snippets > .wr > ul, section#snippets > footer > ul, section#portfolio > .wr, section#portfolio > footer, section#team > .wr > .row2, section#team > footer > .row2, section#team > .wr > .row2 li, section#team > footer > .row2 li, footer {
+section#top > .wr, section#top > footer, section#top > .wr header, section#top > footer header, section#top > .wr header nav ul, section#top > footer header nav ul, section#contacts > .wr, section#contacts > footer, footer {
   display: flex;
   flex-wrap: wrap; }
 
@@ -15,13 +16,19 @@ section#top > .wr, section#top > footer, section#top > .wr header, section#top >
   margin: 0 auto;
   position: relative; }
 
-section#top > .wr header nav ul, section#top > footer header nav ul, section#snippets > .wr > ul, section#snippets > footer > ul, section#team > .wr > .row2, section#team > footer > .row2 {
+section#top > .wr header nav ul, section#top > footer header nav ul {
   list-style: none;
   padding: 0;
   margin: 0; }
 
 .red {
   color: #fa5c65; }
+
+.orange {
+  color: orange; }
+
+.yellow {
+  color: yellow; }
 
 .more {
   display: inline-block;
@@ -59,14 +66,14 @@ section#top {
         section#top > .wr header nav ul li, section#top > footer header nav ul li {
           margin-left: 30px; }
           section#top > .wr header nav ul li a, section#top > footer header nav ul li a {
-            color: #263742;
-            font-family: "Montserrat", sans-serif;
+            color: white;
+            font-family: "Indie Flower", cursive;
             font-size: 14px;
-            font-weight: 400;
+            font-weight: bold;
             text-transform: uppercase;
             text-decoration: none; }
             section#top > .wr header nav ul li a:hover, section#top > footer header nav ul li a:hover {
-              color: #fa5c65; }
+              color: #F4D418; }
           section#top > .wr header nav ul li.social a, section#top > footer header nav ul li.social a {
             width: 25px;
             height: 25px;
@@ -91,16 +98,15 @@ section#top {
     section#top > .wr .sloganCont, section#top > footer .sloganCont {
       max-width: 58%; }
       section#top > .wr .sloganCont h1, section#top > footer .sloganCont h1 {
-        font-family: "Montserrat", sans-serif;
+        font-family: "Ubuntu", sans-serif;
         font-size: 48px;
         font-weight: 700;
-        text-transform: uppercase;
         margin: 0;
-        color: #314a5b; }
+        color: #F4D418; }
       section#top > .wr .sloganCont h4, section#top > footer .sloganCont h4 {
         position: relative;
         color: #314a5b;
-        font-family: "Open Sans", sans-serif;
+        font-family: "Ubuntu", sans-serif;
         font-size: 20px;
         font-weight: 400;
         line-height: 40px;
@@ -120,105 +126,79 @@ section#top {
           border-radius: 7px;
           text-transform: uppercase; }
 
-section#snippets {
-  position: relative; }
-  section#snippets > .wr > ul, section#snippets > footer > ul {
-    margin: 80px 0; }
-    section#snippets > .wr > ul li, section#snippets > footer > ul li {
-      width: 33.33333%;
-      box-sizing: border-box;
-      padding-right: 55px; }
-      section#snippets > .wr > ul li h3, section#snippets > footer > ul li h3 {
-        font-family: Montserrat;
-        font-size: 26px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #314a5b; }
-      section#snippets > .wr > ul li .descr, section#snippets > footer > ul li .descr {
-        color: #9aa0ab;
-        font-family: "Open Sans", sans-serif;
-        font-size: 15px;
-        font-weight: 400; }
-
-section#portfolio {
-  margin: 80px 0; }
-  section#portfolio > .wr, section#portfolio > footer {
-    justify-content: space-between; }
-    section#portfolio > .wr > .col, section#portfolio > footer > .col {
-      width: 49%; }
-      section#portfolio > .wr > .col:first-of-type img, section#portfolio > footer > .col:first-of-type img {
-        max-width: 100%; }
-      section#portfolio > .wr > .col:nth-of-type(2), section#portfolio > footer > .col:nth-of-type(2) {
-        align-self: center; }
-      section#portfolio > .wr > .col h2, section#portfolio > footer > .col h2 {
-        font-family: Montserrat;
-        font-size: 40px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #314a5b;
-        margin: 0; }
-      section#portfolio > .wr > .col h4, section#portfolio > footer > .col h4 {
-        color: #314a5b;
-        font-family: "Open Sans", sans-serif;
+section#contacts {
+  position: relative;
+  background: url(../img/layer.png) no-repeat center/cover, url(../files/contact.jpg) no-repeat center; }
+  section#contacts > .wr, section#contacts > footer {
+    height: 100%;
+    min-height: 100vh;
+    padding: 100px 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-content: space-between;
+    text-align: center; }
+    section#contacts > .wr .row-1, section#contacts > footer .row-1, section#contacts > .wr .row-2, section#contacts > footer .row-2, section#contacts > .wr .row-3, section#contacts > footer .row-3 {
+      width: 100%; }
+      section#contacts > .wr .row-1 .for-title, section#contacts > footer .row-1 .for-title, section#contacts > .wr .row-2 .for-title, section#contacts > footer .row-2 .for-title, section#contacts > .wr .row-3 .for-title, section#contacts > footer .row-3 .for-title {
+        font-family: "Open Sans";
+        font-size: 35px;
+        font-weight: 600;
+        line-height: 40px;
+        color: white; }
+      section#contacts > .wr .row-1 .for-text, section#contacts > footer .row-1 .for-text, section#contacts > .wr .row-2 .for-text, section#contacts > footer .row-2 .for-text, section#contacts > .wr .row-3 .for-text, section#contacts > footer .row-3 .for-text {
+        color: white;
+        font-family: "Open Sans";
         font-size: 16px;
-        font-weight: 400; }
-      section#portfolio > .wr > .col .descr, section#portfolio > footer > .col .descr {
-        color: #9aa0ab;
-        font-family: "Open Sans", sans-serif;
-        font-size: 15px;
-        font-weight: 400; }
-
-section#team > .wr > .row1 h2, section#team > footer > .row1 h2 {
-  color: #314a5b;
-  font-family: "Montserrat", sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0; }
-section#team > .wr > .row1 h3, section#team > footer > .row1 h3 {
-  color: #9aa0ab;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  margin: 0; }
-section#team > .wr > .row2, section#team > footer > .row2 {
-  margin-top: 30px; }
-  section#team > .wr > .row2 li, section#team > footer > .row2 li {
-    width: 33.33333%;
-    padding-right: 35px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-    section#team > .wr > .row2 li .col1, section#team > footer > .row2 li .col1 {
-      width: 128px;
-      height: 128px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
-      background: no-repeat center / cover; }
-    section#team > .wr > .row2 li .col2, section#team > footer > .row2 li .col2 {
-      width: calc(100% - 128px);
-      padding-left: 20px;
-      box-sizing: border-box; }
-      section#team > .wr > .row2 li .col2 h3, section#team > footer > .row2 li .col2 h3 {
-        color: #314a5b;
-        font-family: "Montserrat", sans-serif;
-        font-size: 22px;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin: 0; }
-      section#team > .wr > .row2 li .col2 h4, section#team > footer > .row2 li .col2 h4 {
-        color: #fa5c65;
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
         font-weight: 400;
-        margin: 0; }
-      section#team > .wr > .row2 li .col2 .descr, section#team > footer > .row2 li .col2 .descr {
-        color: #9aa0ab;
-        font-family: "Open Sans", sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        margin-top: 10px; }
+        line-height: 30px;
+        max-width: 465px;
+        margin: 30px auto 100px auto; }
+    section#contacts > .wr .row-2, section#contacts > footer .row-2 {
+      max-width: 73%; }
+      section#contacts > .wr .row-2 .for-form.flex, section#contacts > footer .row-2 .for-form.flex {
+        justify-content: space-between; }
+        section#contacts > .wr .row-2 .for-form.flex [type="text"], section#contacts > footer .row-2 .for-form.flex [type="text"] {
+          height: 50px;
+          width: 49%;
+          background-color: white;
+          border: 1px solid transparent;
+          border-radius: 10px;
+          padding: 0 15px;
+          box-sizing: border-box;
+          color: #3b434c;
+          font-family: "Open Sans";
+          font-size: 16px;
+          font-weight: 400;
+          outline: none; }
+        section#contacts > .wr .row-2 .for-form.flex textarea, section#contacts > footer .row-2 .for-form.flex textarea {
+          width: 100%;
+          height: 200px;
+          background-color: white;
+          border: 1px solid transparent;
+          border-radius: 10px;
+          padding: 15px;
+          margin: 30px 0;
+          box-sizing: border-box;
+          color: #3b434c;
+          font-family: "Open Sans";
+          font-size: 16px;
+          font-weight: 400;
+          outline: none; }
+        section#contacts > .wr .row-2 .for-form.flex [type="submit"], section#contacts > footer .row-2 .for-form.flex [type="submit"] {
+          width: 210px;
+          height: 50px;
+          background-color: #F4D418;
+          border: 1px solid transparent;
+          border-radius: 10px;
+          color: white;
+          font-family: "Open Sans";
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          opacity: 0.8;
+          transition: opacity 0.3s ease; }
+        section#contacts > .wr .row-2 .for-form.flex [type="submit"][type="submit"]:hover, section#contacts > footer .row-2 .for-form.flex [type="submit"][type="submit"]:hover {
+          opacity: 1; }
 
 footer {
   justify-content: space-between;
