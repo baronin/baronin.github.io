@@ -30,6 +30,9 @@ section#top > .wr header nav ul, section#top > footer header nav ul {
 .yellow {
   color: yellow; }
 
+.grey {
+  color: #314a5b; }
+
 .more {
   display: inline-block;
   margin-top: 30px;
@@ -128,7 +131,7 @@ section#top {
 
 section#contacts {
   position: relative;
-  background: url(../img/layer.png) no-repeat center/cover, url(../files/contact.jpg) no-repeat center; }
+  background: url(../img/layer1.png) no-repeat center/cover, url(../files/contact.jpg) no-repeat center; }
   section#contacts > .wr, section#contacts > footer {
     height: 100%;
     min-height: 100vh;
@@ -203,7 +206,7 @@ section#contacts {
 footer {
   justify-content: space-between;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 0px;
   min-height: 90px;
   border-top: 1px solid #e6eaed; }
   footer .col1 a {

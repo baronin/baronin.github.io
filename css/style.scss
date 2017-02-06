@@ -119,7 +119,7 @@ section#top{
 
 section#contacts {
   position: relative;
-  background: url(../img/layer.png) no-repeat center/cover, url(../files/contact.jpg) no-repeat center;
+  background: url(../img/layer1.png) no-repeat center/cover, url(../files/contact.jpg) no-repeat center;
 
   & > .wr {
     @extend %flex;
@@ -209,7 +209,7 @@ section#contacts {
     @extend .wr, %flex;
     justify-content: space-between;;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 0px;
     min-height: 90px;
     border-top: 1px solid #e6eaed;
 
