@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Karton Regular;
+  /* Имя шрифта */
+  src: url(fonts/Karton-Regular.ttf);
+  /* Путь к файлу со шрифтом */ }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%; }
+
+section#top > .wr, section#top > .wr header, section#top > .wr header nav ul, section#iconstuch > .wr > .row {
+  display: flex;
+  flex-wrap: wrap; }
+
+section#top > .wr header nav ul, section#iconstuch > .wr > .row {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.wr {
+  max-width: 1150px;
+  margin: 0 auto;
+  position: relative; }
+
+/*______
+mixin
+_______*/
+section#top {
+  position: relative;
+  height: 100vh;
+  background-image: url(../img/tuchka.png), url(../img/pink.png);
+  background-repeat: no-repeat;
+  background-position: top, center; }
+  section#top > .wr {
+    height: 100%; }
+    section#top > .wr header {
+      justify-content: space-between;
+      flex-basis: 100%;
+      align-self: flex-start; }
+      section#top > .wr header .logo a {
+        display: block;
+        color: black;
+        font-family: Karton;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 0; }
+      section#top > .wr header .logo a.nohoo {
+        display: block;
+        margin: 0;
+        width: 190px;
+        height: 76px;
+        list-style: none;
+        background: url("../img/nohoo.png") no-repeat; }
+      section#top > .wr header nav ul {
+        margin-top: 40px; }
+        section#top > .wr header nav ul li {
+          margin-left: 48px; }
+          section#top > .wr header nav ul li a {
+            color: black;
+            font-family: Karton;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 0;
+            text-decoration: none; }
+      section#top > .wr header .numb-phone p {
+        text-align: right;
+        color: black;
+        font-family: Karton;
+        font-size: 22px;
+        font-weight: 400; }
+    section#top > .wr .oneDispl {
+      max-width: 70%;
+      float: right;
+      margin: 0 0 0 390px; }
+      section#top > .wr .oneDispl h1 {
+        color: black;
+        font-family: Karton;
+        font-size: 46px;
+        font-weight: bold;
+        text-align: right; }
+        section#top > .wr .oneDispl h1 span {
+          color: #46a4db;
+          font-family: Karton;
+          font-size: 56px;
+          text-align: center; }
+      section#top > .wr .oneDispl .btn {
+        display: block;
+        text-decoration: none;
+        position: relative;
+        width: 230px;
+        height: 100px;
+        padding-top: 20px;
+        padding-left: 20px;
+        margin-left: 410px;
+        background: url(../img/katalog.png) no-repeat center/contain; }
+        section#top > .wr .oneDispl .btn:hover {
+          background: url(../img/kataloghov.png) no-repeat center/contain; }
+        section#top > .wr .oneDispl .btn span {
+          color: white;
+          font-family: Karton;
+          font-size: 52px;
+          font-weight: 400; }
+
+section#iconstuch > .wr > .row {
+  margin-top: 30px; }
+  section#iconstuch > .wr > .row li {
+    width: 100% / 5;
+    padding-right: 130px;
+    box-sizing: border-box; }
+    section#iconstuch > .wr > .row li .col1 {
+      width: 90px;
+      height: 90px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background: no-repeat center / cover; }
+
+/*# sourceMappingURL=style.css.map */
