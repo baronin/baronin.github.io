@@ -2,142 +2,100 @@
 @import "font";
 @import "setting";
 
-section#top {
-  position: relative;
-  height:100vh;
-  background-image: url(../img/tuchka.png),url(../img/pink.png);
-  background-repeat:  no-repeat;
-  background-position: top, center ;
-  &>.wr {
-    @extend %flex;
-    height:100%;
+.top_header {
+  width: 1980px;
+  height: 680px;
+  background:/* url("../img/tuchka.png") repeat-x,*/ url(../img/back.png)/*, #feb0b1*/;
+ /* background: */
 
-
-    header{
-      @extend %flex;
-      justify-content: space-between;
-      flex-basis:100%;
-      align-self: flex-start;
-
-      .logo {
-
-        a {
-          display: block;
-
-          color: black;
-          font-family: Karton;
-          font-size: 19px;
-          font-weight: 400;
-          line-height: 0;
-
+  .header_topline{
+    .back {
+      .row {
+        .logo{
+          width: 260px;
+          height: 100px;
         }
-        a.nohoo {
-          display: block;
-          margin:0;
-          width: 190px;
-          height: 76px;
-          list-style: none;
-          background: url("../img/nohoo.png") no-repeat;
-        }
-      }
+        .main-navigation {
+          width: 710px;
+          height: 10px;
+          padding-top: 42px;
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style:none;
+            padding: 0;
+            margin: 0;
+            li {
 
-      nav {
-        ul {
-          @extend %ul, %flex;
-          margin-top: 40px;
+              a{
+                padding-left: 48px;
+                color: black;
+                font-family: Karton;
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 0;
+                text-decoration: none;
+              }
 
-          li {
-            margin-left: 48px;
-
-            a{
-              color: black;
-              font-family: Karton;
-              font-size: 22px;
-              font-weight: 400;
-              line-height: 0;
-              text-decoration: none;
             }
           }
         }
-      }
-
-      .numb-phone {
-        p {
-          text-align: right;
-          color: black;
+        .navi {
+          width: 180px;
+          height: 100px;
+          padding-top: 20px;
           font-family: Karton;
           font-size: 22px;
           font-weight: 400;
         }
       }
-    }
-
-    .oneDispl {
-      max-width:70%;
-      float: right;
-      margin: 0 0 0 390px;
-
-      h1 {
-        color: black;
-        font-family: Karton;
-        font-size: 46px;
-        font-weight: bold;
-        text-align: right;
-
-        span {
-          color: #46a4db;
+      .texti {
+        height: 574px;
+        .hidi{
+          padding-top: 130px;
+          padding-bottom:100px;
+          color: black;
           font-family: Karton;
-          font-size: 56px;
-          text-align: center;
+          font-size: 28px;
+          font-weight: bold;
+          line-height: 1.5;
+          .two {
+            color: #2aabd2;
+            font-size: 41px;
+          }
+          .three {
+            padding-left: 300px;
+          }
         }
-      }
-      .btn {
-        display: block;
-        text-decoration: none;
-        position: relative;
-        width: 230px;
-        height: 100px;
-        padding-top: 20px;
-        padding-left: 20px;
-        margin-left: 410px;
-        background: url(../img/katalog.png) no-repeat center/contain;
+        .batn {
+          display: block;
+          text-decoration: none;
+          position: relative;
+          width: 230px;
+          height: 100px;
+          padding-top: 20px;
+          padding-left: 20px;
+          margin-left: 410px;
+          background: url(../img/katalog.png) no-repeat center/contain;
 
           &:hover {
             background: url(../img/kataloghov.png) no-repeat center/contain;
           }
+          span{
 
-        span{
-
-          color: white;
-          font-family: Karton;
-          font-size: 52px;
-          font-weight: 400;
+            color: white;
+            font-family: Karton;
+            font-size: 52px;
+            font-weight: 400;
+          }
         }
       }
     }
   }
 }
 
-section#iconstuch {
-  &>.wr {
-    &>.row {
-      @extend %flex, %ul;
-      margin-top: 30px;
-
-      li {
-        width: 100% / 5;
-        padding-right:130px;
-        box-sizing: border-box;
-
-        .col1 {
-          width: 90px;
-          height: 90px;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          border-radius: 50%;
-          background: no-repeat center / cover;
-        }
-      }
-    }
+.raznoe {
+  .razn {
+    height: 200px;
   }
 }
