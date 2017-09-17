@@ -1,0 +1,49 @@
+.ancient {
+    background: url(../img/back-1.svg) 0 0 repeat;
+    background-size: cover;
+}
+
+.stone {
+    background: url(../img/stone.svg) 0 0 no-repeat;
+    width: 300px;
+    height: 300px;
+    margin: 150px auto;
+    position: relative;
+}
+.wood-wheel {
+    animation-name: rotate;
+    animation-duration: 2s;
+}
+
+.wood-wheel {
+    background: url(../img/wood-wheel.svg) 0 0 no-repeat;
+    width: 235px;
+    height: 235px;
+    position: absolute;
+    left: 35px;
+    top: 35px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(90deg);
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.wood-wheel {
+    animation-name: rotate;
+    animation-duration: 2s;
+}
