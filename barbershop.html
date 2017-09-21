@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Барбершоп Бородинский</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style1.css">
+    <!-- Когда скрипт отключен -->
+   <noscript>
+    <link rel="stylesheet" href="css/noscipt.css">
+  </noscript>
+</head>
+<body>
+
+<!--Start header -->
+  <header class="main_header">
+    <div class="container clearfix">
+      <nav class="main_navigation">
+        <ul>
+          <li>
+            <a href="#">Информация</a>
+          </li>
+          <li>
+            <a href="#">Новости</a>
+          </li>
+          <li>
+            <a href="price.html">Прайс-лист</a>
+          </li>
+          <li>
+            <a href="shop.html">Магазин</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="user_block">
+        <a href="/login" class="login">Вход</a>
+      </div>
+    </div>
+  </header>
+<!-- Stop header -->
+
+<!-- Start main container -->
+  <main class="container">
+    <!-- Start logo -->
+    <div class="index_logo">
+      <img src="img/logo.png" width="368px" height="204px" alt="Барбершоп Бородинский">
+    </div>
+    <!-- Stop logo  -->
+
+    <!-- Start features  -->
+    <section class="features clearfix">
+      <div class="features_item">
+        <b class="features_name">Быстро</b>
+        <p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДЕТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!</p>
+      </div>
+
+      <div class="features_item">
+        <b class="features_name">Круто</b>
+        <p>ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ. МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО! ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.</p>
+      </div>
+
+      <div class="features_item">
+        <b class="features_name">Дорого</b>
+        <p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?</p>
+      </div>
+    </section>
+    <!-- Stop features -->
+
+    <!-- Start incex content  part 1 -->
+    <div class="index_content clearfix">
+      <div class="index_content_left">
+        <h2 class="index_content_title">Новости</h2>
+        <ul class="news_preview">
+          <li>
+            <p>НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
+            </p>
+            <time datetime="2016-01-11">25 сентября</time>
+          </li>
+          <li>
+            <p>В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДЕТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ
+            </p>
+            <time datetime="2016-01-11">19 сентября</time>
+          </li>
+      </ul>
+        <a href="#" class="btn">Все новости</a>
+      </div>
+      <!-- Start gallery -->
+      <div class="index_content_right">
+        <h2 class="index_content_title">Фотогалерея</h2>
+        <div class="gallery">
+          <figure class="gallery_content">
+            <a href=""><img src="img/gallery.png" width="286" height="164" alt=""></a>
+            <a href=""><img src="img/gallery.png" width="286" height="164" alt=""></a>
+            <a href=""><img src="img/gallery.png" width="286" height="164" alt=""></a>
+            <a href=""><img src="img/gallery.png" width="286" height="164" alt=""></a>
+          </figure>
+          <!-- Кнопки добавляются с помощью JS -->
+          <button class="btn gallery_prev">Назад</button>
+          <button class="btn gallery_next">Вперёд</button> 
+        </div>
+      </div>
+      <!-- Stop gallery -->
+    </div>
+    <!-- Stop index content part 1 -->
+    <!-- Start index content part 2 -->
+    <div class="index_content clearfix">
+      <div class="index_content_left">
+        <h2 class="index_content_title">Контактная информация</h2>
+        <p>
+          БАРБЕРШОП «БОРОДИНСКИЙ»<br>
+          АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br>
+          ТЕЛЕФОН: +7 (495) 666-02-66
+        </p>
+        <p>
+          Время работы:<br>
+          ПН — ПТ: С 09:00 ДО 17:00<br>
+          СБ — ВС: С 10:00 ДО 19:00<br>
+        </p>
+        <a href="#" class="btn js_open_map"> Как проехать</a>
+        <a href="#" class="btn">Обратная связь</a>
+      </div>
+      <div class="index_content_right">
+        <h2 class="index_content_title">Записаться</h2>
+        <p>Укажите желаемаю дату и время и мы свяжемс с вами для подтверждения брони</p>
+        <form action="https://echo.htmlacademy.ru" class="appointment_form" method="post">
+          <input type="text" name="date" placeholder="Дата">
+          <input type="text" name="time" placeholder="Время">
+          <input type="text" name="name" placeholder="Ваше имя">
+          <input type="tel" name="phone" placeholder="Телефон">
+          <botton type="submit" class="btn">Отправить</botton>
+        </form>
+      </div>
+    </div>
+    <!-- Stop index content part 2 -->
+  </main>
+<!-- Stop main container -->
+
+  <footer class="main_footer">
+    <div class="container">
+      <section class="footer_contacts">
+        БАРБЕРШОП «БОРОДИНСКИЙ»<br>
+        АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br>
+        <a href="#" class="js_open_map">Как нас найти?</a><br>
+        ТЕЛЕФОН: +7 (495) 666-02-66
+      </section>
+      <section class="footer_social">
+        <p>Давайте дружить!</p>
+        <a href="" class="social_btn social_btn_vk">Вконтакте</a>
+        <a href="" class="social_btn social_btn_fb">Фейсбук</a>
+        <a href="" class="social_btn social_btn_inst">Инстаграм</a>
+      </section>
+      <section class="footer_copyright">
+        <p>Учебный макет Yaroslava Baronina</p>
+        <a href="baronin.github.io" class="btn">baronin.github.io</a>
+      </section>
+    </div>
+  </footer>
+<!-- Stop main footer -->
+
+<!-- Start popup container -->
+  <div class="modal_content">
+    <button class="modal_content_close" type="button" title="Закрыть">
+      Закрыть
+    </button>
+
+    <h2 class="modal_content_title">Личный кабинет</h2>
+    <p>Введите свой логин и пароль</p>
+
+    <form action="#" class="login_form" method="post">
+      <input type="text"     class="icon_user"     name="login"    placeholder="Логин" required> <!-- required -->
+      <input type="password" class="icon_password" name="password" placeholder="Пароль" required>
+      <label class="login_checkbox">
+        <input type="checkbox" name="remember">
+        <span class="checkbox_indicator"></span>
+        Запомни меня
+      </label>
+      <a href="#" class="restore">Я забыл пароль!</a>
+      <button class="btn" type="submit" name="button">Войти</button>
+    </form>
+  </div>
+<!-- Stop popup container -->
+
+<!-- Start MAP -->
+  <div class="modal_content_map">
+    <button class="modal_content_close" type="button" title="Закрыть">
+     Закрыть
+    </button>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1696.937311839895!2d33.63394381343468!3d49.00991734286197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1505054759586" width="466" height="361" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+  <div class="modal_overlay"></div>
+<!-- Stop MAP -->
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/map.js"></script>
+  <!-- <script type="text/javascript"></script>  yandex map-->
+  <script>
+   // var gallery = document.querySelector(".gallery");
+    //gallery.classList.add("gallery_live");
+    // Добавляем управление элементами
+    // Внимание! Плохая практика
+    // Только для быстрой демонстрации подхода
+   // var buttons = 'button class="btn gallery_prev" type="button">Назад</button>' + 'button class="btn gallery_next" type="button">Вперед</button>';
+     // gallery.innerHTML = gallery.innerHTML + buttons;
+
+      // Зададим начальное состояние кнопок
+      //var prev = document.querySelector(".gallery_prev");
+      //prev.setAttribute('disabled', 'disabled');
+      // Инициализацмя завершена
+      //Дале  типовой код работы галереи
+      // обработка событий, переклчение слайдов и т.д
+  </script>
+<!--
+  <script>
+    var html = document.documentElement;
+    htlm.className = html.className.replace("no-js", "js");
+  </script>
+-->
+</body>
+</html>
