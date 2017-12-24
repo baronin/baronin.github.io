@@ -378,7 +378,7 @@ background: none;
   height: 164px;  
 }
 
-/*.gallery_live .btn {
+/*gallery_live .btn {
   position: absolute;
   bottom: 0;
   width: 140px;
@@ -392,14 +392,19 @@ background: none;
 .gallery_live .gallery_next {
   right: 0;
 }
-*/ Кнопи через цсс без 
-.gallery_prev {
+*/
+
+/* Кнопи через цсс без */
+    
+.gallery .gallery_prev {
   left: 0;
 }
 
-.gallery_next {
+.gallery .gallery_next {
+    position: absolute;
   right: 0;
 }
+
 /*
 .no-js .gallery .btn {
   display: none;
