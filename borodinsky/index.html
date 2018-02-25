@@ -92,15 +92,15 @@
       <div class="index_content_right">
         <h2 class="index_content_title">Фотогалерея</h2>
         <div class="gallery">
-          <figure class="gallery_content">
+          <figure class="gallery_content ">
             <a href=""><img src="img/gallery.png" width="286" height="164" alt=""></a>
             <a href=""><img src="img/gallery.png" width="286" height="164" alt=""></a>
             <a href=""><img src="img/gallery.png" width="286" height="164" alt=""></a>
             <a href=""><img src="img/gallery.png" width="286" height="164" alt=""></a>
           </figure>
-          <!-- Кнопки добавляются с помощью JS -->
-          <button class="btn gallery_prev">Назад</button>
-          <button class="btn gallery_next">Вперёд</button> 
+          <!-- Кнопки добавляются с помощью JS
+          <button class="btn gallery_prev disabled" type="button">Назад</button>
+          <button class="btn gallery_next" type="button">Вперёд</button>  -->
         </div>
       </div>
       <!-- Stop gallery -->
@@ -196,27 +196,14 @@
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="js/map.js"></script>
   <!-- <script type="text/javascript"></script>  yandex map-->
-  <script>
-   // var gallery = document.querySelector(".gallery");
-    //gallery.classList.add("gallery_live");
-    // Добавляем управление элементами
-    // Внимание! Плохая практика
-    // Только для быстрой демонстрации подхода
-   // var buttons = 'button class="btn gallery_prev" type="button">Назад</button>' + 'button class="btn gallery_next" type="button">Вперед</button>';
-     // gallery.innerHTML = gallery.innerHTML + buttons;
+      <script>
+            var gallery = document.querySelector(".gallery");
+            gallery.classList.add("gallery_live");
+            var buttons = '<button class="btn gallery_prev" type="button">Назад</button>' + '<button class="btn gallery_next" type="button">Вперед</button>';
+            gallery.innerHTML = gallery.innerHTML + buttons;
+            var prev = document.querySelector(".gallery_prev");
+            prev.setAttribute('disabled', 'disabled');
+      </script> 
 
-      // Зададим начальное состояние кнопок
-      //var prev = document.querySelector(".gallery_prev");
-      //prev.setAttribute('disabled', 'disabled');
-      // Инициализацмя завершена
-      //Дале  типовой код работы галереи
-      // обработка событий, переклчение слайдов и т.д
-  </script>
-<!--
-  <script>
-    var html = document.documentElement;
-    htlm.className = html.className.replace("no-js", "js");
-  </script>
--->
 </body>
 </html>

@@ -29,7 +29,7 @@ body {
 
 .inner_page {
   color: #000000;
-  background: #f8f3f0 url("") repeat;
+  background: #f8f3f0 url("../img/bg1.png") repeat;
 }
 
 .inner_page .main_header {
@@ -37,7 +37,7 @@ body {
 }
 
 
-/*-------------------------- Start header --------------------------*/
+/* Start header */
 .main_header {
   width: 100%;
   min-height: 70px;
@@ -52,6 +52,8 @@ body {
   float: left;
   width: 780px;
   min-height: 70px;
+    
+        white-space: nowrap;
 }
 
 .main_navigation ul {
@@ -94,6 +96,7 @@ body {
   right: 20px;
   bottom: 0;
   left: 20px;
+    
   height: 5px;
 
   background-color: #ffffff;
@@ -117,7 +120,7 @@ background: none;
 
 .main_navigation .logo_inner img {
   width: 111px;
-  height: 22px;
+  height: 24px;
 }
 
 .main_navigation .logo_inner:hover {
@@ -132,6 +135,7 @@ background: none;
   min-height: 70px;
 }
 
+/* start login */
 .login {
   position: relative;
 
@@ -171,7 +175,9 @@ background: none;
 .login:hover::before {
   opacity: 1;
 }
-/*-------------------------- Stop header --------------------------*/
+/* end login */
+
+/* End header */
 
 /* START LOGO */
 
@@ -186,7 +192,7 @@ background: none;
   width: 368px;
   height: 204px;
 }
-/* STOP LOGO */
+/* END LOGO */
 
 /* start features */
 .features {
@@ -195,7 +201,7 @@ background: none;
 
 .features_item {
   float: left;
-  width: 298px;  /*нужно 300*/
+  width: 300px;  /*нужно 300*/
   min-height: 175px;
   margin-right: 20px;
 
@@ -222,10 +228,11 @@ background: none;
   position: absolute;
   bottom: 0;
   left: 50%;
+    
   display: block;
   width: 20px;
   height: 20px;
-  margin-left: -10px;
+  margin-left: -10px; /* -20px от width-height - по центру*/
 
   transform: rotate(45deg);
 
@@ -236,24 +243,21 @@ background: none;
   margin: 10px;
   margin-bottom: 0;
 }
-
-
 /* stop features */
 
 /* Start index_content */
-
 .index_content {
   margin-bottom: 35px;
   padding: 50px 80px;
 
   color: #000000;
 
-  background:
-    /* url("") no-repeat center; Разделющая тень */
-    url("../img/bg.png") no-repeat center,
-    #f8f5f2 url("../img/bg1.png"); /*Добавить текстуру*/
-
-  border: 1px pink solid;
+  background: 
+      url("../img/bg.png") no-repeat center,
+      #f8f5f2 url(../img/bg1.png) no-repeat;
+  /*background:
+   /* url("../img/bg.png") no-repeat center, Разделющая тень*/
+   /* #f8f5f2 url("../img/bg1.png"); /*Добавить текстуру*/
 }
 
 .index_content_left {
@@ -272,7 +276,7 @@ background: none;
   margin: 0;
   margin-bottom: 25px;
 
-  font-size: 30px;
+  font-size: 26px;
   line-height: 42px;
 }
 
@@ -305,13 +309,13 @@ background: none;
 .btn {
   display: inline-block;
   margin-right: 0;
-  /*margin-right: 16px; */
+  /*margin-right: 16px;*/
   padding: 10px 33px;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -321,7 +325,6 @@ background: none;
   color: #ffffff;
   background-color: #000000;
   border: none;
-  outline: none;
   cursor: pointer;
 }
 
@@ -345,8 +348,7 @@ background: none;
 /* Start gallery */
 .gallery {
   position: relative;
-
-  height: 260px;
+  height: 172px;
 }
 
 .gallery_content {
@@ -355,20 +357,22 @@ background: none;
 
 
 .gallery_content img {
-  width: 143px;
+  width: 127px;
   height: 82px;
   margin-right: 5px;
 }
+
+/* gallery live */
 .gallery_live {
   position: relative;
-  height: 260px;
+  height: 260px; 
 }
 .gallery_live .gallery_content {
   height: 164px;
   margin: 0;
   background-color: #cccccc;
   border: 7px solid #ffffff;
-}
+}  
 
 .gallery_live .gallery_content a {
   position: absolute;
@@ -378,7 +382,25 @@ background: none;
 
 .gallery_live .gallery_content img {
   width: 286px;
-  height: 164px;
+  height: 164px;  
+}
+
+/* Кнопи через цсс без */
+
+.gallery_live .btn {
+    position: absolute;
+    bottom: 0;
+    
+    width: 140px;
+    margin: 0;
+}
+
+.gallery_live .gallery_prev {
+  left: 0;
+}
+
+.gallery_live .gallery_next {
+  right: 0;
 }
 
 /*gallery_live .btn {
@@ -397,16 +419,7 @@ background: none;
 }
 */
 
-/* Кнопи через цсс без */
 
-.gallery .gallery_prev {
-  left: 0;
-}
-
-.gallery .gallery_next {
-    position: absolute;
-  right: 0;
-}
 
 /*
 .no-js .gallery .btn {
@@ -437,7 +450,6 @@ background: none;
 
   background-color: #f9f6f3;
   border: 2px solid #000000;
-  outline: none;
 }
 
 .appointment_form input:focus {
@@ -734,8 +746,8 @@ background: none;
 
   background: #000000 url("../img/spite.png") no-repeat center;
   transition:
-  background-position 0.5s,
-  background-color 0.5s;
+      background-position 0.5s,
+      background-color 0.5s;
 }
 
 .social_btn_vk {
@@ -764,7 +776,7 @@ background: none;
 
 .footer_copyright {
   float: right;
-  max-width: 180px;
+  max-width: 208px;
   text-align: center;
     /* Только для оформления сетки */
   min-height: 90px;
@@ -985,4 +997,5 @@ background: none;
 .modal_content_show {
   display: block;
   animation: bounce 0.6s;
+  z-index: 200;
 }

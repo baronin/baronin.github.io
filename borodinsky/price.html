@@ -13,7 +13,7 @@
     <div class="container clearfix">
       <nav class="main_navigation">
         <a href="index.html" class="logo_inner">
-          <img src="../barbershop/img/logo_nav.png" alt="Barbershop Borodinsky" width="111" height="24">
+          <img src="../borodinsky/img/logo_nav.png" alt="Barbershop Borodinsky" width="111" height="24">
         </a>
         <ul>
           <li>
@@ -26,7 +26,7 @@
             <span>Прайс-лист</span>
           </li>
           <li>
-            <a href="shop.html">Магазин</a>
+            <a href="#">Магазин</a>
           </li>
           <li>
             <a href="#">Контакты</a>
@@ -34,7 +34,7 @@
         </ul>
       </nav>
       <div class="user_block">
-        <a href="#" class="login">Вход</a>
+        <a href="/login" class="login">Вход</a>
       </div>
     </div>
   </header>
@@ -134,6 +134,41 @@
       </section>
     </div>
   </footer>
-  <!-- Stop main footer -------------------------------------->
+  <!-- Stop main footer -->
+
+<!-- Start popup container -->
+<div class="modal_content">
+  <button class="modal_content_close" type="button" title="Закрыть">
+    Закрыть
+  </button>
+
+  <h2 class="modal_content_title">Личный кабинет</h2>
+  <p>Введите свой логин и пароль</p>
+
+  <form action="#" class="login_form" method="post">
+    <input type="text"     class="icon_user"     name="login"    placeholder="Логин" required> <!-- required -->
+    <input type="password" class="icon_password" name="password" placeholder="Пароль" required>
+    <label class="login_checkbox">
+      <input type="checkbox" name="remember">
+      <span class="checkbox_indicator"></span>
+      Запомни меня
+    </label>
+    <a href="#" class="restore">Я забыл пароль!</a>
+    <button class="btn" type="submit" name="button">Войти</button>
+  </form>
+</div>
+<!-- Stop popup container -->
+
+<!-- Start MAP -->
+<div class="modal_content_map">
+  <button class="modal_content_close" type="button" title="Закрыть">
+    Закрыть
+  </button>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1696.937311839895!2d33.63394381343468!3d49.00991734286197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1505054759586" width="466" height="361" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<div class="modal_overlay"></div>
+<!-- Stop MAP -->
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
 </body>
 </html>
