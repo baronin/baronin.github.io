@@ -1,0 +1,7 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Сервисы, которыми используются для просмотра в разных разрешениях.
+
+http://quirktools.com/
+
+http://mattkersley.com/responsive/

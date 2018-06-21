@@ -1,0 +1,212 @@
+@import "reset.css";
+@import "setting.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+header {
+  background: #292929;
+  overflow: hidden;
+}
+header .center-block-main {
+  margin: 0 auto;
+  max-width: 990px;
+}
+header .center-block-main .logo {
+  float: left;
+  margin-top: 45px;
+}
+header .center-block-main nav {
+  float: right;
+}
+header .center-block-main nav ul li {
+  float: left;
+  font-weight: bold;
+}
+header .center-block-main nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 50px 35px 43px;
+  border-bottom: 3px solid #292929;
+}
+header .center-block-main nav ul li a:hover {
+  color: #339933;
+  border-bottom: 3px solid #339933;
+}
+.content {
+  border-left: 1px solid #e1e0e0;
+  border-right: 1px solid #e1e0e0;
+}
+main {
+  float: left;
+  width: 62%;
+  margin-top: 70px;
+}
+main article {
+  margin-bottom: 70px;
+}
+main article header {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 0;
+  background: none;
+}
+main article header .publish {
+  position: absolute;
+  bottom: -60px;
+  width: 100%;
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  box-sizing: border-box;
+}
+main article header:hover .publish {
+  bottom: 0;
+  transition: bottom 0.2s linear;
+}
+main article h2 {
+  color: #4f4e4e;
+  font-size: 1.75em;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0 0 40px 20px;
+}
+main article p {
+  margin: 0 0 20px 20px;
+}
+main article .more {
+  display: inline-block;
+  color: #c2c2c2;
+  border: 2px solid #c2c2c2;
+  border-radius: 20px;
+  padding: 7px 20px;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+main article .more:hover {
+  color: #339933;
+  border-color: #339933;
+}
+aside {
+  float: right;
+  width: 28%;
+  margin-top: 70px;
+}
+aside .widget {
+  margin-bottom: 50px;
+}
+aside .widget h2 {
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  color: #6c6969;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #f8f8f8;
+  border-left: 3px solid #58c93a;
+}
+aside .widget .search {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 0.75em;
+  color: #b9b9b9;
+  border: 1px solid #e1e0e0;
+  border-right: 0;
+}
+aside .widget nav {
+  margin: 0 0 0 20px;
+}
+aside .widget .subscribe {
+  position: relative;
+  width: 100%;
+  height: 48px;
+}
+aside .widget .subscribe .subsrc__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 50px 15px 20px;
+  font-size: 0.75em;
+  color: #b9b9b9;
+  border: 1px solid #e1e0e0;
+  border-right: 0;
+  box-sizing: border-box;
+}
+aside .widget .subscribe .subsrc__img {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+.pager {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border-top: 1px solid #e1e0e0;
+  font-size: 1.125em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.pager a {
+  color: #818181;
+  text-decoration: none;
+}
+.pager a:hover {
+  text-decoration: underline;
+}
+footer {
+  padding: 50px 0 100px 0;
+  background: #f8f8f8;
+  border-top: 1px solid #e1e0e0;
+  text-align: center;
+}
+footer .center-block-main a img {
+  margin-bottom: 20px;
+}
+footer .center-block-main p {
+  text-decoration: none;
+}
+footer .center-block-main p a {
+  font-size: 0.81em;
+  color: #a6a6a6;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  header .center-block-main .logo {
+    margin-top: 20px;
+  }
+  header .center-block-main nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 25px 35px;
+    border-bottom: 3px solid #292929;
+  }
+  main {
+    float: none;
+    width: 100%;
+    margin-top: 30px;
+  }
+  main article header img {
+    width: 100%;
+  }
+  aside {
+    float: none;
+    width: 100%;
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 620px) {
+  header .center-block-main .logo {
+    float: none;
+    margin: 20px auto;
+    display: block;
+  }
+  header .center-block-main nav ul li a {
+    padding: 10px 30px;
+  }
+  header .center-block-main nav {
+    float: none;
+    width: 100%;
+  }
+}
