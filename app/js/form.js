@@ -2,7 +2,6 @@
  * Created by JavaRush on 25.03.2017.
  */
 $(document).ready(function() {
-
     $("#form").submit(function () {
         $.ajax({
             type: "POST",
