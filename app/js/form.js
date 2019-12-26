@@ -1,6 +1,3 @@
-/**
- * Created by JavaRush on 25.03.2017.
- */
 $(document).ready(function() {
     $("#form").submit(function () {
         $.ajax({
@@ -9,7 +6,7 @@ $(document).ready(function() {
             data: $(this).serialize()
         }).done(function () {
             $(this).find("input").val("");
-            alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+            alert("Thanks for you question, We are callback!");
              $("#form").trigger("reset");
         });
         return false;
