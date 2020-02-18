@@ -46,7 +46,8 @@ header {
   @include vendor('display', 'flex');
   @include vendor('flex-direction', 'column');
   @include vendor('justify-content', 'space-between');
-  background: _palette(header, bg);
+  //background: _palette(header, bg);
+  background-color: red;
   color: _palette(header, fg);
   height: 100%;
   overflow-y: auto;
@@ -92,6 +93,12 @@ header {
       display: block;
       margin: 0 auto _size(element-margin) auto;
       width: 8em;
+      height: 8em;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
     }
 
     h1 {

@@ -1,14 +1,14 @@
 const gulp = require("gulp"),
-    sass = require("gulp-sass"),
-    postcss = require("gulp-postcss"),
-    autoprefixer = require("autoprefixer"),
-    cssnano = require("cssnano"),
-    sourcemaps = require("gulp-sourcemaps");
+      sass = require("gulp-sass"),
+      postcss = require("gulp-postcss"),
+      autoprefixer = require("autoprefixer"),
+      cssnano = require("cssnano"),
+      sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
 
 const paths = {
   styles: {
-    src: "app/**/*.sass",
+    src: "app/sass/**/*.sass",
     dest: "build"
   }
 };
@@ -16,7 +16,6 @@ function style() {
   return (
       gulp
           .src(paths.styles.src)
-          // Initialize sourcemaps before compilation starts
           .pipe(sourcemaps.init())
           .pipe(sass())
           .on("error", sass.logError)
@@ -34,13 +33,13 @@ function reload() {
 function watch() {
   style();
 
-  gulp.watch(paths.styles.src, style);
 
   browserSync.init({
     server: {
       baseDir: "./"
     }
   });
+  gulp.watch(paths.styles.src, style);
   gulp.watch("./app/sass/*.scss", style);
   gulp.watch("./*.html", reload);
 }

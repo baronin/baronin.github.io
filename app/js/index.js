@@ -3,6 +3,5 @@ var sass = require('node-sass');
 /* sass.render({
   file: "main.scss",
   [, options..]
-}, function(err, result) { /*...*/ });
- */
+}, function(err, result) {  });*/
 console.log("test")
