@@ -1,0 +1,31 @@
+/* Icon */
+
+.share-social {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  li {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    a {
+      color: _palette(header, fg-light);
+    }
+
+    .icon:before {
+      font-size: 30px;
+    }
+  }
+
+}
+
+.icon {
+  @include icon;
+  border-bottom: none;
+  position: relative;
+
+  > .label {
+    display: none;
+  }
+}

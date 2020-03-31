@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div id="main">
+  <section>
+    <div class="container container-post">
+      <article vocab="http://schema.org/" typeof="Article">
+        {% include article-header.html %}
+        <div class="entry" id="post" property="articleBody">
+          {{ content }}
+          <hr>
+          {% include article-footer.html %}
+        </div>
+      </article>
+    </div>
+  </section>
+</div>

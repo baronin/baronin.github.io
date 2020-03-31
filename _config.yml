@@ -1,1 +1,70 @@
-theme: jekyll-theme-leap-day
+name: Baronin
+paginate: 5
+url: "https://baronin.github.io/"
+github-url: "https://github.com/baronin/baronin.github.io"
+base-url: ""
+github-default-branch: "/edit/master/"
+
+sass:
+  style: compressed
+
+timezone: Europe/Paris
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      author: "Yaroslav Baronin"
+      layout: post
+      lang: en
+      base-url: "/"
+  - scope:
+      path: ua
+    values:
+      lang: ua
+      base-url: "/ua/"
+
+gems: [
+  "jekyll-paginate",
+  "github-pages",
+  "jekyll-sitemap",
+  "wdm"
+]
+
+# For travis
+exclude: [vendor]
+
+# Value to use into url per language
+langs-value:
+  en: ""
+  ua: ua
+
+# Translation
+t:
+  home:
+    en: "Home"
+    ua: "Головна"
+  blog:
+    en: "Blog"
+    ua: "Блог"
+  project:
+    en: "Project"
+    ua: "Проект"
+  about-me:
+    en: "About me"
+    ua: "Про мене"
+  contact:
+    en: "Contact"
+    ua: "Контакти"
+  subtitle:
+    en: "My very own part of the Internet"
+    ua: "Моя власна частина Інтернету"
+  footer-article:
+    en: "Found a mistake, or just want to add your words to this post ?"
+    ua: "Ви знайшли помилку чи просто хочете додати свої слова до цієї публікації?"
+  fork:
+    en: "Fork it on github"
+    ua: "Викладіть його на github"
+  desc:
+    en: "My personnal website. Yaroslav Baronin"
+    ua: "Мій особистий веб-сайт. Ярослав Баронін"
