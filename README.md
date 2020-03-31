@@ -1,5 +1,3 @@
-# [Chocanto.me](http://chocanto.me) [![Build Status](https://travis-ci.org/Chocanto/Chocanto.github.io.svg?branch=master)](https://travis-ci.org/Chocanto/Chocanto.github.io)
-
 Hey ! baronin.github.io is my personnal website, but any contribution is welcome !
 
 ## Installation
