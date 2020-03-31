@@ -1,0 +1,31 @@
+---
+layout: default
+i18n-link: index
+lang: ua
+---
+
+<div id="main" class="main">
+  <section class="blog">
+    <div class="container">
+      {% assign posts=paginator.posts | where:"lang", page.lang %}
+        {% for category in site.categories %}
+          {% if category[0] == "ua" %}
+            <h3>Блог, <span>{{ category[0] }}</span></h3>
+            <div class="features">
+              {% for post in category[1] %}
+                <article>
+                  {% include article-header.html %}
+                  <div class="entry">
+                    {{ post.excerpt }}
+                  </div>
+                  <a class="button button-primary" href="{{ site.base-url }}{{ post.url }}">
+                    Детальніше <i class="fa fa-chevron-right"></i>
+                  </a>
+                </article>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+    </div>
+  </section>
+</div>
