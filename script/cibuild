@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e # halt script on error
+
 bundle update
-bundle exec jekyll build	
-htmlproofer --url-ignore /^$/ --only-4xx --check-html ./_site
+bundle exec jekyll build
+bundle exec htmlproofer ./_site
