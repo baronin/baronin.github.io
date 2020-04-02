@@ -24,11 +24,9 @@ defaults:
       lang: ua
       base-url: "/ua/"
 
-gems: [
+plugins: [
   "jekyll-paginate",
   "github-pages",
-  "jekyll-sitemap",
-  "wdm"
 ]
 
 # For travis
