@@ -27,8 +27,7 @@ defaults:
 gems: [
   "jekyll-paginate",
   "github-pages",
-  "jekyll-sitemap",
-  "wdm"
+  "jekyll-sitemap"
 ]
 
 # For travis
