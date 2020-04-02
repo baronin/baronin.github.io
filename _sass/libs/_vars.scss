@@ -1,3 +1,25 @@
+//size
+$fontSize: (
+        default: 16pt,
+        x-small:  0.9em,
+        small:  0.7em,
+        extra-small:  0.8em,
+        x-medium:  0.9em,
+        medium: 1.25em,
+        extra-medium: 1.5em,
+        x-large: 1.75em,
+        large: 2em,
+        extra-large: 3em,
+);
+
+// indents
+$indents: (
+        mobile: 20px,
+        tablet: 30px,
+        desctop: 40px
+);
+
+
 // Misc.
 $misc: (
         z-index-base: 10000,

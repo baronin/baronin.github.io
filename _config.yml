@@ -8,7 +8,7 @@ github-default-branch: "/edit/master/"
 sass:
   style: compressed
 
-timezone: Europe/Paris
+timezone: Europe/Kiev
 
 defaults:
   - scope:
@@ -46,8 +46,8 @@ t:
     en: "Blog"
     ua: "Блог"
   project:
-    en: "Project"
-    ua: "Проект"
+    en: "Projects"
+    ua: "Проекти"
   about-me:
     en: "About me"
     ua: "Про мене"

@@ -33,4 +33,24 @@
       }
     }
   }
+
+  .project {
+    h4 {
+      margin-top: _indents(mobile);
+    }
+
+    .inner {
+      margin-bottom: _indents(mobile);
+    }
+
+    &__created {
+      font-size: _fontSize(x-small);
+      margin: _indents(mobile) 0;
+    }
+
+    &__technology {
+      margin-left: 20px;
+      list-style: disc;
+    }
+  }
 }

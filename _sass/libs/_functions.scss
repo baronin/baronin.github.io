@@ -32,3 +32,11 @@
 @function _size($keys...) {
   @return val($size, $keys...);
 }
+
+@function _indents($keys...) {
+  @return val($indents, $keys...)
+}
+
+@function _fontSize($keys...) {
+  @return val($fontSize, $keys...)
+}

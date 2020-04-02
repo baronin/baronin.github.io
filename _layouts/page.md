@@ -3,7 +3,7 @@ layout: default
 ---
 <div id="main">
   <section>
-    <div class="container">
+    <div class="container features">
      {{ content }}
     </div>
   </section>
