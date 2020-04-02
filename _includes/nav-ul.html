@@ -1,7 +1,33 @@
 <ul>
-  <li><a href="{{ page.base-url }}">{{ site.t['home'][page.lang] }}</a></li>
-  <li><a href="{{ page.base-url }}blog/">{{ site.t['blog'][page.lang] }}</a></li>
-  <li><a href="{{ page.base-url }}projects/">{{ site.t['project'][page.lang] }}</a></li>
-  <li><a href="{{ page.base-url }}about/">{{ site.t['about-me'][page.lang] }}</a></li>
-  <li><a href="{{ page.base-url }}contact/">{{ site.t['contact'][page.lang] }}</a></li>
+    <li><a href="{{ page.base-url }}">{{ site.t['home'][page.lang] }}</a></li>
+    <li><a href="{{ page.base-url }}blog/">{{ site.t['blog'][page.lang] }}</a></li>
+    <li><a href="{{ page.base-url }}projects/">{{ site.t['project'][page.lang] }}</a></li>
+    <li><a href="{{ page.base-url }}about/">{{ site.t['about-me'][page.lang] }}</a></li>
+    <li><a href="{{ page.base-url }}contact/">{{ site.t['contact'][page.lang] }}</a></li>
+    <li><a href="{{ site.base-url }}/assets/CV/Yaroslav'sResume.pdf"
+           download="Yaroslav's Resume"
+           target="_blank">
+        <i class="fa fa-download"></i> {{ site.t['download'][page.lang] }}</a>
+    </li>
 </ul>
+<script>
+    let id = document.getElementById('downloadCV')
+
+    function onStartedDownload(id) {
+        console.log(`Started downloading: ${id}`);
+    }
+
+    function onFailed(error) {
+        console.log(`Download failed: ${error}`);
+    }
+
+    var downloadUrl = "https://example.org/image.png";
+
+    var downloading = browser.downloads.download({
+        url: downloadUrl,
+        filename: 'my-image-again.png',
+        conflictAction: 'uniquify'
+    });
+
+    downloading.then(onStartedDownload, onFailed);
+</script>
