@@ -8,7 +8,7 @@ i18n-link: "projects"
 
 <article class="project">
     <a href="https://lynx.org.ua/" class="image" >
-      <img src="{{ site.base-url }}/assets/images/lynx.jpg" alt="">
+      <img src="{{ site.base-url }}/assets/images/lynx.jpg" alt="Lynx image">
     </a>
     <div class="inner">
       <h4>Sports and entertainment center</h4>
@@ -28,7 +28,7 @@ i18n-link: "projects"
 
 <article class="project">
     <a href="https://garagebarbershop.net.ua/" class="image" >
-      <img src="{{ site.base-url }}/assets/images/barbershop.jpg" alt="">
+      <img src="{{ site.base-url }}/assets/images/barbershop.jpg" alt="barbershop garage">
     </a>
     <div class="inner">
       <h4>Barbershop</h4>
