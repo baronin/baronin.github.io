@@ -29,3 +29,21 @@ bundle exec htmlproof --href-ignore /^$/ --only-4xx _site/
 ## Contribution
 
 If you find any errors on this website or maybe just want to improve something, feel free to open an issue. You can also fork this repository and do a pull request with your modifications. I will review any issue or pull request. For questions about why a solution I used doesn't work for you, please inbox me here in GitHub.
+
+## Plugins 
+
+https://ionicons.com/
+
+``` all images in foolfer```
+{% for image in site.static_files %}
+    {% if image.path contains 'images/projects.yml' %}
+          <img src="{{ site.base-url }}{{ image.path }}">
+    {% endif %}
+{% endfor %}
+
+``` all lang ```
+ {% for postTrans in postsTrans %}
+    {% if postTrans.lang %}
+        <a class="{{ postTrans.lang }}" href="{{ site.base-url }}{{ postTrans.url }}">{{ postTrans.lang }}</a>
+    {% endif %}
+ {% endfor %}

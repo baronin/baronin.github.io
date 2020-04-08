@@ -1,11 +1,8 @@
-/* Wrapper */
+@import "../../_sass/common/mixins";
 
-#wrapper {
-  background: _palette(bg);
-
-  @if _misc(header-side) == 'right' {
-    padding-right: $size-header;
-  } @else {
-    padding-left: $size-header;
+.wrapper {
+  transition: left 0.4s;
+  @include desktop {
+    width: calc(100% - 320px);
   }
 }

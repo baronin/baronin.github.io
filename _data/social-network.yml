@@ -1,0 +1,19 @@
+- link: https://www.facebook.com/yaroslav.baronin
+  name: Facebook
+  icon: logo-facebook
+  class: facebook
+
+- link: https://www.instagram.com/baronin_yaroslav/
+  name: Instagram
+  icon: logo-instagram
+  class: instagram
+
+- link: https://www.linkedin.com/in/yaroslav-baronin/
+  name: Linkedin
+  icon: logo-linkedin
+  class: linkedin
+
+- link: https://vk.com/baronin_yaroslav
+  name: VK
+  icon: logo-vk
+  class: vk

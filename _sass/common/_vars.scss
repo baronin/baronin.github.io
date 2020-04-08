@@ -1,0 +1,115 @@
+// Responsive
+$mobile-width: 445px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$fhd-width: 1440px;
+
+// Colors
+$color-white: #fff;
+$color-dark: #000;
+
+$color-success: #9acd32;
+$color-error: #ff6347;
+
+// Fonts
+$font-family-base: "Lato", sans-serif;
+$font-weight-regular: 400;
+
+// Fonts size 12 14 16 20  30
+$fontSize-extra-small: 12px;
+$fontSize-small: 14px;
+$fontSize-xmedium: 16px;
+$fontSize-medium: 24px;
+$fontSize-xlarge: 32px;
+$fontSize-large: 38px;
+
+$fontSize-default: $fontSize-xmedium;
+
+//size
+$fontSize: (
+        default: 16pt,
+        x-small:  0.9em,
+        small:  0.7em,
+        extra-small:  0.8em,
+        x-medium:  0.9em,
+        medium: 1.25em,
+        extra-medium: 1.5em,
+        x-large: 1.75em,
+        large: 2em,
+        extra-large: 3em,
+);
+
+// indents
+$indents: (
+        small: 20px,
+        medium: 30px,
+        large: 40px
+);
+
+// Misc.
+$misc: (
+        z-index-base: 10000,
+        header-side: 'right'
+);
+
+// Duration.
+$duration: (
+        header: 0.5s,
+        transition: 0.2s
+);
+
+// Size.
+$size: (
+        border-radius: 5px,
+        border-width: 2px,
+        element-height: 2.75em,
+        element-margin: 2.25em
+);
+
+// Font.
+$font: (
+        family: ('Lato', sans-serif),
+        family-fixed: ('Source Code Pro', monospace),
+        weight: 400,
+        weight-bold: 700
+);
+
+// Palette.
+$palette: (
+        nav: (
+           bgclink: #1f6350,
+        ),
+        font: (
+                green: #4acaa8
+        ),
+        bg: #fff,
+        fg: #888,
+        font-color: #777,
+        fg-light: #aaa,
+        border: #f4f4f4,
+        border-bg: #fafafa,
+        border2: #e4e4e4,
+        border2-bg: #f4f4f4,
+        border3: #e0e0e0,
+        border3-bg: #eaeaea,
+        accent1: (
+                bg: #4acaa8,
+                fg-bold: #ffffff,
+                fg: mix(#4acaa8, #ffffff, 25%),
+                fg-light: mix(#4acaa8, #ffffff, 40%)
+        ),
+        accent2: (
+                bg: #989898,
+                fg-bold: #ffffff,
+                fg: mix(#989898, #ffffff, 25%),
+                fg-light: mix(#989898, #ffffff, 40%)
+        ),
+        header: (
+                bg: #4acaa8,
+                bgdark: #222,
+                fg-bold: #ffffff,
+                fg: mix(#4acaa8, #ffffff, 25%),
+                fg-light: mix(#4acaa8, #ffffff, 40%),
+                border: mix(#4acaa8, #ffffff, 90%)
+        )
+);

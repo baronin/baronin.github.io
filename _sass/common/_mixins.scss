@@ -1,0 +1,79 @@
+@mixin font($fontName, $weight, $style, $urlName: $fontName) {
+  font-family: '#{$fontName}';
+  src: url('/assets/fonts/#{$urlName}/#{$urlName}.eot');
+  src: url('/assets/fonts/#{$urlName}/#{$urlName}.eot#iefix') format('embedded-opentype'),
+  url('/assets/fonts/#{$urlName}/#{$urlName}.woff') format('woff'),
+  url('/assets/fonts/#{$urlName}/#{$urlName}.ttf') format('truetype'),
+  url('/assets/fonts/#{$urlName}/#{$urlName}.svg') format('svg');
+  font-weight: $weight;
+  font-style: $style;
+  font-display: swap;
+}
+
+// Responsive
+@mixin mobile {
+  @media (min-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin fhd {
+  @media (min-width: #{$fhd-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+// Hidden
+@mixin hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+// Visible
+@mixin visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+// Background image
+@mixin bgimage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Text overflow
+@mixin text-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin container($mw: 1200px, $px:15px) {
+  max-width: $mw;
+  width: 100%;
+  padding-left: $px;
+  padding-right: $px;
+  margin-right: auto;
+  margin-left: auto;
+}

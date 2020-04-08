@@ -69,3 +69,16 @@ t:
   download:
     en: "Download CV"
     ua: "Завантажити резюме"
+  title-project:
+    en: "These are not all my projects. Big projects were the NDA"
+    ua: "Це не всі мої проекти. Великі проекти були в рамках NDA"
+  about-title:
+    en: "Web design, web development, UI and UX"
+    ua: "Web design, web development, UI and UX"
+  about-subtitle:
+    en: "Website development and design for your business"
+    ua: "Розробка та дизайн сайтів для вашого бізнесу"
+  about-desc:
+    en: "I sincerely love web development and web design, am actively learning new standards, and in my free time I share my experience with people who want to take on a new profession."
+    ua: "Я щиро люблю веб-розробку та веб-дизайн, активно вивчаю нові стандарти, а у вільний час ділюся своїм досвідом з людьми які хочуть оволодіти новою професією."
+
