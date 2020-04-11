@@ -31,7 +31,8 @@
   {% for postTrans in postsTrans %}
     <link rel="alternate" hreflang="{{ postTrans.lang }}" href="{{ site.base-url }}{{ postTrans.url }}"/>
   {% endfor %}
-  <!--[if lte IE 8]><script src="{{ site.base-url }}/js/ie/html5shiv.js"></script><![endif]-->
+  <!--[if lte IE 8]>
+  <script src={{ site.base-url }}"/assets/js/ie/html5shiv.js"></script><![endif]-->
   <link rel="stylesheet" href="{{ site.base-url }}/css/main.css"/>
 </head>
 <body>
@@ -46,17 +47,23 @@
   <main class="main">
     {{ content }}
   </main>
-  {% include body-footer.html %}
+  {% include footer.html %}
 </div>
 
 
-<script src="{{ site.base-url }}/js/vendor/jquery.min.js"></script>
-<script src="{{ site.base-url }}/js/vendor/jquery.scrolly.min.js"></script>
+<script src="{{ site.base-url }}/assets/js/vendor/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="{{ site.base-url }}/assets/js/main.js"></script>
+
+<!--
+ <script src="{{ site.base-url }}/js/vendor/jquery.scrolly.min.js"></script>
 <script src="{{ site.base-url }}/js/vendor/skel.min.js"></script>
 <script src="{{ site.base-url }}/js/vendor/util.js"></script>
 <script src="{{ site.base-url }}/js/ie/respond.min.js"></script>
-<script src="{{ site.base-url }}/js/main.js"></script>
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+ -->
+
+
 {% if jekyll.environment == 'production' %}
   <script>
       console.log('production')

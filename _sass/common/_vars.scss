@@ -1,12 +1,15 @@
 // Responsive
 $mobile-width: 445px;
+$mobile-sm-width: 600px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
-$fhd-width: 1440px;
+$wide-width: 1440px;
+$fhd-width: 1640px;
 
 // Colors
 $color-white: #fff;
 $color-dark: #000;
+$color-light-gray: #f4f4f4;
 
 $color-success: #9acd32;
 $color-error: #ff6347;
@@ -15,15 +18,15 @@ $color-error: #ff6347;
 $font-family-base: "Lato", sans-serif;
 $font-weight-regular: 400;
 
-// Fonts size 12 14 16 20  30
-$fontSize-extra-small: 12px;
-$fontSize-small: 14px;
-$fontSize-xmedium: 16px;
-$fontSize-medium: 24px;
-$fontSize-xlarge: 32px;
-$fontSize-large: 38px;
+// Fonts size
+$font-size-xsmall: 12px;
+$font-size-small: 14px;
+$font-size-xmedium: 16px;
+$font-size-medium: 24px;
+$font-size-xlarge: 32px;
+$font-size-large: 38px;
 
-$fontSize-default: $fontSize-xmedium;
+$font-size-default: $font-size-xmedium;
 
 //size
 $fontSize: (
@@ -46,24 +49,10 @@ $indents: (
         large: 40px
 );
 
-// Misc.
-$misc: (
-        z-index-base: 10000,
-        header-side: 'right'
-);
-
 // Duration.
 $duration: (
         header: 0.5s,
         transition: 0.2s
-);
-
-// Size.
-$size: (
-        border-radius: 5px,
-        border-width: 2px,
-        element-height: 2.75em,
-        element-margin: 2.25em
 );
 
 // Font.

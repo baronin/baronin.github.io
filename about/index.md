@@ -17,4 +17,4 @@ I love the front-end and often working to find the best optimized code for the p
 ### My website
 
 This website is entirerly **open sourced**, so feel free to have a look inside via my GitHub. You can, also, send me issues if anything here is not working well for you.
- I will always try to answer you as fast as possible!
+I will always try to answer you as fast as possible!

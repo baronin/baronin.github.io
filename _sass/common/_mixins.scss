@@ -16,6 +16,11 @@
     @content;
   }
 }
+@mixin sm-mobile {
+  @media (min-width: #{$mobile-sm-width - 1px}) {
+    @content;
+  }
+}
 
 @mixin tablet {
   @media (min-width: #{$tablet-width - 1px}) {
@@ -25,6 +30,12 @@
 
 @mixin desktop {
   @media (min-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin wide-width {
+  @media (min-width: #{$wide-width - 1px}) {
     @content;
   }
 }
