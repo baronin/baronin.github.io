@@ -1,0 +1,33 @@
+{% if post %}
+  {% assign page = post %}
+{% endif %}
+
+<h3 class="blog-article-title">{{ page.title }}</h3>
+<div class="blog-content-wrap">
+  <div class="blog-content">
+    <div class="article-image" style="background-image:url('{{ site.base-url }}/assets/images/posts/{{ page.img }}.png')"></div>
+    <div class="blog-meta">
+      <span class="author" property="author publisher">
+      <i class="fa fa-user"></i>
+      {% if page.author %}
+        {{ page.author }}
+      {% else %}
+        {{ site.author }}
+      {% endif %}
+    </span>
+      <span class="date">
+        <i class="fa fa-calendar"></i>
+        <time datetime="{{ page.date | date:"%F" }}" property="datePublished">
+          {% if page.lang == "ua" %}
+            {% include ukrainian-date.html %}
+          {% else %}
+            {{ page.date|date:"%B %d, %Y" }}
+          {% endif %}
+        </time>
+      </span>
+    </div>
+  </div>
+  <div class="blog-entry"> {{ include.shot-text }}</div>
+</div>
+
+

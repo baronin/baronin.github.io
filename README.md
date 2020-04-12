@@ -14,6 +14,7 @@ Then execute the following commands (for Linux):
 git clone git@github.com:baronin/baronin.github.io.git
 cd baronin.github.io
 bundle exec jekyll serve
+Incremental build: disabled. Enable with --incremental
 ```
 
 Open http://127.0.0.1:4000/ in your prefereted navigator, and... It should be working !

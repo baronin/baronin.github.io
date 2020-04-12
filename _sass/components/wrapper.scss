@@ -21,4 +21,8 @@
     padding-top: _indents(medium);
     padding-bottom: _indents(medium);
   }
+
+  @include wide-width {
+    min-height: calc(100vh - 322px);
+  }
 }

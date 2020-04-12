@@ -79,6 +79,7 @@ h5 {
 h6 {
   font-size: 0.7em;
 }
+
 a {
   color: _palette(font-color);
   text-decoration: none;
@@ -87,4 +88,14 @@ a {
 p {
   font-size: 15px;
   line-height: 1.5;
+}
+
+article {
+  padding-top: 36px;
+  margin-bottom: 36px;
+  border-top: solid 3px $color-light-gray;
+
+  &:first-child {
+    border-top: none;
+  }
 }
