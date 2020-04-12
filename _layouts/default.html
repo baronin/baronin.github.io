@@ -1,0 +1,73 @@
+{% assign postsTrans=site.posts | where:"i18n-link", page.i18n-link | sort: 'lang' %}
+
+{% if postsTrans.size == 0 %}
+  {% assign postsTrans=site.pages | where:"i18n-link", page.i18n-link | sort: 'lang' %}
+{% endif %}
+
+<!doctype html>
+<html class="no-js" lang="{{ page.lang }}">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>{% if page.title %} {{ page.title }} - {% endif %}{{ site.name }}</title>
+
+  <meta name="description"
+        content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.t['desc'][page.lang] }}{% endif %}"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#7CB342">
+
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="{{ page.title }}"/>
+  <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
+  {% if page.img %}
+    <meta property="og:image" content="{{ site.url }}{{ site.base-url }}/assets/images/posts/{{ page.img }}.png"/>
+  {% endif %}
+
+  <link rel="apple-touch-icon" href="{{ site.base-url }}/apple-touch-icon.png"/>
+
+  {% for postTrans in postsTrans %}
+    <link rel="alternate" hreflang="{{ postTrans.lang }}" href="{{ site.base-url }}{{ postTrans.url }}"/>
+  {% endfor %}
+  <!--[if lte IE 8]>
+  <script src={{ site.base-url }}"/assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="{{ site.base-url }}/css/main.css"/>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
+
+{% include section-nav.html %}
+<div class="wrapper">
+  {% include header.html %}
+  <main class="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</div>
+
+
+<script src="{{ site.base-url }}/assets/js/vendor/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js"></script>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="{{ site.base-url }}/assets/js/main.js"></script>
+
+<!--
+ <script src="{{ site.base-url }}/js/vendor/jquery.scrolly.min.js"></script>
+<script src="{{ site.base-url }}/js/vendor/skel.min.js"></script>
+<script src="{{ site.base-url }}/js/vendor/util.js"></script>
+<script src="{{ site.base-url }}/js/ie/respond.min.js"></script>
+ -->
+
+
+{% if jekyll.environment == 'production' %}
+  <script>
+      console.log('production')
+  </script>
+{% endif %}
+</body>
+</html>

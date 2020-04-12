@@ -1,0 +1,36 @@
+{% if post %}
+  {% assign page = post %}
+{% endif %}
+<div>
+  <h2 property="headline name">
+    <a href="{{ site.base-url }}{{ page.url }}">{{ page.title }}</a>
+  </h2>
+  <div
+      style="background-image:url('{{ site.base-url }}/assets/images/posts/{{ page.img }}.png')"
+      class="article-image"
+  >
+    <meta property="image" content="{{ site.base-url }}/assets/images/posts/{{ page.img }}.png"/>
+  </div>
+</div>
+<div class="test-div">{{ include.test }}</div>
+
+<div class="meta">
+    <span class="author" property="author publisher">
+      <i class="fa fa-user"></i>
+      {% if page.author %}
+        {{ page.author }}
+      {% else %}
+        {{ site.author }}
+      {% endif %}
+    </span>
+  <span class="date">
+        <i class="fa fa-calendar"></i>
+        <time datetime="{{ page.date | date:"%F" }}" property="datePublished">
+          {% if page.lang == "ua" %}
+            {% include french-date.html %}
+          {% else %}
+            {{ page.date|date:"%B %d, %Y" }}
+          {% endif %}
+        </time>
+      </span>
+</div>

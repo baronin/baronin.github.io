@@ -1,0 +1,32 @@
+---
+layout: default
+i18n-link: index
+lang: en
+---
+
+<section class="blog">
+  <div class="blog-container">
+    {% assign posts=paginator.posts | where:"lang", page.lang %}
+    {% for category in site.categories %}
+      {% if category[0] == "en" %}
+        <h3>Blog, {{ category[0] }}</h3>
+        <div class="blog-features">
+          {% for post in category[1] %}
+            <article class="blog-article">
+              {% capture test1 %}
+                dsaasd
+              {% endcapture %}
+              {% include article-header.html test=test1 %}
+              <div class="entry">
+                {{ post.excerpt }}
+              </div>
+              <a class="button button-primary" href="{{ site.base-url }}{{ post.url }}">
+                Read more <i class="fa fa-chevron-right"></i>
+              </a>
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

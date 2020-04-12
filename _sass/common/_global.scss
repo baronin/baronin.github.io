@@ -1,0 +1,90 @@
+@import "vars";
+@import "functions";
+
+* {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+}
+
+html {
+  direction: ltr;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  color: _palette(font-color);
+  font-family: $font-family-base;
+  font-display: swap;
+  font-size: $font-size-default;
+  font-weight: $font-weight-regular;
+  -webkit-overflow-scrolling: touch;
+  line-height: 1.5;
+
+}
+
+body {
+  line-height: 1.5;
+  -webkit-animation: bugfix infinite 1s;
+}
+
+input,
+textarea,
+button,
+select {
+  color: $color-white;
+  font-family: $font-family-base;
+  font-display: swap;
+  font-size: $font-size-default;
+  font-weight: $font-weight-regular;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+@-webkit-keyframes bugfix {
+  to {
+    padding: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: _palette(font-color);
+  font-weight: 700;
+  line-height: 1em;
+  margin: 0 0 0.5625em 0;
+}
+
+h1 {
+  font-size: $font-size-large;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 0.9em;
+}
+
+h6 {
+  font-size: 0.7em;
+}
+a {
+  color: _palette(font-color);
+  text-decoration: none;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+}

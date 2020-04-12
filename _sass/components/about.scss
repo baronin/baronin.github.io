@@ -1,0 +1,19 @@
+@import "../../_sass/common/vars";
+@import "../../_sass/common/functions";
+
+.about {
+  padding: _indents(medium) _indents(small);
+}
+
+.about-title {
+  color: _palette(font, green);
+  margin-bottom: _indents(small);
+}
+
+.about-sutbtitle {
+  font-size: $font-size-medium;
+  font-weight: bold;
+  line-height: 30px;
+  margin-bottom: _indents(large);
+
+}

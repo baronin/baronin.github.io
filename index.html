@@ -1,175 +1,39 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Web developer Yaroslav Baronin</title>
+---
+layout: default
+i18n-link: index
+lang: en
+---
 
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="Web-developer from Kremenchug">
-    <meta name="keywords" content="React, JavaScript, JS from Kremenchug">
-
-    <link rel="shortcut icon" href="images/man.ico" type="image/png">
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="build/ie8.css"/><![endif]-->
-    <!--[if lte IE 8]>
-    <script src="app/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="build/main.css"/>
-    <link rel="stylesheet" href="app/css/fontawesome-all.min.css"/>
-</head>
-<body>
-
-<!-- Header -->
-<section id="header">
-    <header>
-        <span class="image avatar"><img src="images/profile.jpg" alt="photo"/></span>
-        <h1 id="logo"><a href="#">Yaroslav Baronin</a></h1>
-    </header>
-    <nav id="nav">
-        <ul>
-            <li><a href="#one" class="active">Home page</a></li>
-            <li><a href="#two">My skills</a></li>
-            <li><a href="#three">Portfolio</a></li>
-        </ul>
-    </nav>
-    <footer>
-        <ul class="icons">
-            <li>
-                <a href="https://vk.com/baronin_yaroslav" class="icon fa-vk">
-                    <span class="label" target="_blank" title="social vk">Vkontakte</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/yaroslav.baronin" class="icon fa-facebook" target="_blank"
-                   title="social fb">
-                    <span class="label">Facebook</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/baronin_yaroslav/" class="icon fa-instagram" target="_blank"
-                   title="social inst">
-                    <span class="label">Instagram</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/yaroslav-baronin/" class="icon fa-linkedin" target="_blank"
-                   title="social linkedin">
-                    <span class="label">Linkedin</span>
-                </a>
-            </li>
-        </ul>
-    </footer>
-</section>
-
-<!-- Wrapper -->
-<div id="wrapper">
-
-    <!-- Main -->
-    <div id="main">
-
-        <!-- One -->
-        <section id="one">
-            <div class="container">
-                <header class="major">
-
-                    <h2>Software Engineer</h2>
-                    <p>UI Department</p>
-                </header>
-                <p></p>
-            </div>
-        </section>
-
-        <!-- Two -->
-        <section id="two">
-            <div class="container">
-
-                <h3>My Skills</h3>
-                <ul class="feature-icons">
-                    <li class="fa-html5">HTML5</li>
-                    <li class="fa-css3">CSS3</li>
-                    <li class="fa fa-file-code-o">JavaScript</li>
-                    <li class="fa fa-bold">Bootstrap</li>
-                    <li class="fa fa-github">GitHub</li>
-                    <li class="fa fa-git">Git</li>
-                    <li class="fa fa-file-powerpoint-o">Adobe Photoshop CC, inVision</li>
-                    <li class="fa fa-cogs">Gulp</li>
-                    <li class="fa fa-code ">Vue JS</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="three">
-            <div class="container">
-
-                <h2>Portfolio</h2>
-                <div class="features">
-                    <article>
-                        <a href="https://garagebarbershop.net.ua/" class="image" title="garagebarbershop.net.ua">
-                            <img src="images/garagebarber.jpg" alt="garagebarbershop.net.ua">
-                        </a>
-
-                        <div class="inner">
-                            <h2>Barbershop</h2>
-                            <a href="https://garagebarbershop.net.ua/" title="garagebarbershop.net.ua">https://garagebarbershop.net.ua/</a>
-                            <h5>Design and development made by me</h5>
-                            <span>2017</span>
-                            <h5>Using:</h5>
-                            <ul class="feature-list">
-                                <li>MODX</li>
-                                <li>Bootstrap</li>
-                                <li>Slick</li>
-                                <li>Responsive</li>
-                                <li>Google analytics</li>
-                            </ul>
-                        </div>
-                    </article>
-            </div>
-                <div class="features">
-                    <article>
-                        <a href="https://lynx.org.ua/" class="image" title="https://lynx.org.ua/">
-                            <img src="images/lynx.jpg" alt="lynx.org.ua/">
-                        </a>
-
-                        <div class="inner">
-                            <h2>Laser-tag</h2>
-                            <a href="https://lynx.org.ua/" title="https://lynx.org.ua/">https://lynx.org.ua/</a>
-                            <h5>Design and development made by me</h5>
-                            <h5>Using:</h5>
-                            <span>2019</span>
-                            <ul class="feature-list">
-                                <li>Gulp</li>
-                                <li>Flex-box</li>
-                                <li>Slick</li>
-                                <li>Responsive</li>
-                                <li>Google analytics</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <section id="footer">
-            <div class="container">
-                <ul class="copyright">
-                    <li> Blog Yaroslava Baronina. All rights reserved.</li>
-                    <li>&copy; 2017-2019</li>
-                    <li><a href="https://ukraine.com.ua/?page=246965">hosting in Ukraine</a></li>
-                </ul>
-            </div>
-        </section>
-
+{% include about.html %}
+{% include skills.html %}
+<!--
+ <div id="main">
+  <section id="one">
+    <div class="container">
+      <header class="major">
+        <h2>Software Engineer</h2>
+        <p>UI Department</p>
+      </header>
+      <p></p>
     </div>
+  </section>
+  <section id="two">
+    <div class="container">
+      <h3>My Skills</h3>
+      <ul class="feature-icons">
+        <li class="fa-html5">HTML5</li>
+        <li class="fa-css3">CSS3</li>
+        <li class="fa fa-file-code-o">JavaScript</li>
+        <li class="fa fa-bold">Bootstrap</li>
+        <li class="fa fa-github">GitHub</li>
+        <li class="fa fa-git">Git</li>
+        <li class="fa fa-file-powerpoint-o">Adobe Photoshop CC, inVision</li>
+        <li class="fa fa-cogs">Gulp</li>
+        <li class="fa fa-code ">Vue JS</li>
+      </ul>
+    </div>
+  </section>
 </div>
-<!-- Scripts -->
-<script src="app/js/jquery.min.js"></script>
-<script src="app/js/jquery.scrollzer.min.js"></script>
-<script src="app/js/jquery.scrolly.min.js"></script>
-<script src="app/js/skel.min.js"></script>
-<script src="app/js/util.js"></script>
-<!--[if lte IE 8]>
-<script src="app/js/ie/respond.min.js"></script><![endif]-->
-<script src="app/js/main.js"></script>
 
-</body>
-</html>
+ -->
+

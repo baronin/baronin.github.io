@@ -1,0 +1,24 @@
+@import "../../_sass/common/vars";
+
+.blog {
+  .blog-container {
+    @include container()
+  }
+}
+
+.blog-article {
+  padding-top: 36px;
+  margin-bottom: 36px;
+  border-top: solid 3px $color-light-gray;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.article-image {
+  height: 124px;
+  border-right: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
