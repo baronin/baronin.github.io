@@ -1,0 +1,13 @@
+<input type="checkbox" id="nav-toggle" hidden>
+<section class="section-nav">
+  <label for="nav-toggle" class="nav-toggle" onclick id="hamburger"></label>
+  <header class="section-header-top">
+    <span class="header-avatar"><img src="{{ site.base-url }}/assets/images/profile.jpg" alt="photo"/></span>
+    <h2><a href="/">Yaroslav Baronin</a></h2>
+  </header>
+  {% include nav.html %}
+  <footer class="section-nav-footer">
+    {% include select-lang.html %}
+    {% include social-link.html %}
+  </footer>
+</section>

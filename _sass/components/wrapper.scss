@@ -1,11 +1,28 @@
-/* Wrapper */
+@import "../../_sass/common/mixins";
+@import "../../_sass/common/functions";
 
-#wrapper {
-  background: _palette(bg);
+.wrapper {
+  transition: left 0.4s;
+  @include desktop {
+    width: calc(100% - 368px);
+  }
+  @include fhd {
+    width: calc(100% - 490px);
+  }
+}
 
-  @if _misc(header-side) == 'right' {
-    padding-right: $size-header;
-  } @else {
-    padding-left: $size-header;
+.main {
+  min-height: calc(100vh - 368px);
+  padding-top: _indents(small);
+  padding-bottom: _indents(small);
+
+  @include tablet {
+    min-height: calc(100vh - 386px);
+    padding-top: _indents(medium);
+    padding-bottom: _indents(medium);
+  }
+
+  @include wide-width {
+    min-height: calc(100vh - 512px);
   }
 }

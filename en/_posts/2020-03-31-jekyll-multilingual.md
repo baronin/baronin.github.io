@@ -6,8 +6,7 @@ i18n-link: multilingual
 
 Some would think that, because Jekyll is a static website generator, it is impossible to handle internationalization. Nothing is more than wrong!
 
-
-In fact, it might not be as easy as using a PHP-based framework like Wordpress. But after using some magic, you will be able to serve your posts and pages in as many languages as you need to! Because this problem is well known, you can find other methods in [stackoverflow](https://stackoverflow.com) or other webdev-oriented blogs. The method I will explain you in this post is based on *folders*.
+In fact, it might not be as easy as using a PHP-based framework like Wordpress. But after using some magic, you will be able to serve your posts and pages in as many languages as you need to! Because this problem is well known, you can find other methods in [stackoverflow](https://stackoverflow.com) or other webdev-oriented blogs. The method I will explain you in this post is based on _folders_.
 
 ## A story of folders
 
@@ -19,7 +18,7 @@ First, those which will be parsed by Jekyll and then, for some, rendered. They a
 
 ### Exposed folders/files
 
-We earlier saw folders and files starting with `_`. Well, every other resources not starting by this character will be simply copied by Jekyll inside your final site. It might be stylesheet, fonts, images, xml, etc. But what if we put a parsed resources inside a simple folder ? The resource (a markdown flavored file for example) will be rendered inside your recently created folder. You can then access to a post or a page by looking at it's url (eg. `/my-cool-folder/2016/03/02/my-post.html` is a post inside *my-cool-folder*).
+We earlier saw folders and files starting with `_`. Well, every other resources not starting by this character will be simply copied by Jekyll inside your final site. It might be stylesheet, fonts, images, xml, etc. But what if we put a parsed resources inside a simple folder ? The resource (a markdown flavored file for example) will be rendered inside your recently created folder. You can then access to a post or a page by looking at it's url (eg. `/my-cool-folder/2016/03/02/my-post.html` is a post inside _my-cool-folder_).
 
 It is a very interesting feature for internationalization...
 
@@ -46,7 +45,7 @@ Those two combined make a very efficient way to show to your visitor a page in h
 
 Our project will look like this :
 
-~~~
+```
 project/
 	_drafts/
 	_includes/
@@ -59,7 +58,7 @@ project/
 			mon-billet-traduit.md
 		index.md
 	index.md
-~~~
+```
 
 I will here take the example of a french traslated website (what a surprise !).
 
@@ -71,27 +70,25 @@ It is what makes Jekyll really cool, and also what makes this method functionnal
 
 So your post should look like this : `_posts/my-translated-post.md`
 
-~~~ yaml
+```yaml
 ---
 title: My translated post !
 i18n-link: translated-post
 ---
-
 Hey ! This is a pretty cool translated post !
-~~~
+```
 
 And your translated post : `fr/_posts/mon-billet-traduit.md`
 
-~~~ yaml
+```yaml
 ---
 title: Mon billet traduit !
 i18n-link: translated-post
 ---
-
 Hey ! Ça c'est du post traduit ou je m'y connais pas !
-~~~
+```
 
-Easy right ? For your next post what you just have to do is replacing your *i18n-link* by a unique new one.
+Easy right ? For your next post what you just have to do is replacing your _i18n-link_ by a unique new one.
 
 Your translation is now fully functionnal. Yup, really ! If you want to access your translated post what you just have to do is add a `/fr/` prefix to your URL ! But you will not want to ask your visitors to do it right ? Wouldn't it be cool to generate language buttons to access translated versions of your posts ?
 
@@ -99,10 +96,11 @@ Your translation is now fully functionnal. Yup, really ! If you want to access y
 
 Here we go, translating post is cool. Accessing translated post via URL is also cool. But automatically display available translations for a page and create links is cooler !
 
-So let's just prepare our code for the moment : 
+So let's just prepare our code for the moment :
 
 {% raw %}
-~~~ html
+
+```html
 <div class="lang">
   <ul>
     <li>FR</li>
@@ -110,7 +108,8 @@ So let's just prepare our code for the moment :
     <li>CH</li>
   </ul>
 </div>
-~~~
+```
+
 {% endraw %}
 
 Ok, this is roughly what we want to generate : a list of our available languages. Each language will link to one of our translated post. Something like `/{lang}/my-cool-post`.
@@ -118,7 +117,8 @@ Ok, this is roughly what we want to generate : a list of our available languages
 Our url is automaticaly generated and provided by Jekyll with the `url` attribute of a post. Like this :
 
 {% raw %}
-~~~ html
+
+```html
 <div class="lang">
   <ul>
     <li><a class="FR" href="{{ site.base-url }}{{ postFR.url }}">FR</a></li>
@@ -126,7 +126,8 @@ Our url is automaticaly generated and provided by Jekyll with the `url` attribut
     <li><a class="CH" href="{{ site.base-url }}{{ postCH.url }}">CH</a></li>
   </ul>
 </div>
-~~~
+```
+
 {% endraw %}
 
 `site.base-url` is the base url of our website. For example if the root of our website is located in a folder, we would place the folder path in this [liquid](https://shopify.github.io/liquid/) variable.
@@ -137,9 +138,11 @@ Let's say you didn't translated your post in chinese, would you like to let a br
 What we will have to do is find all translations that are from the same post. To do so we will have to use our `i18n-link` variable defined earlier. It will make it easy to link our translations together.
 
 {% raw %}
-~~~ liquid
+
+```liquid
 {% assign posts=site.posts | where:"i18n-link", page.i18n-link | sort: 'lang' %}
-~~~
+```
+
 {% endraw %}
 
 `site.posts` contains every posts of our jekyll website, so we are just searching for posts where `i18n-link` is equal to the `i18n-link` of our current page. And to be sure that our list language is the same ordered through the pages we sort them.
@@ -147,25 +150,33 @@ What we will have to do is find all translations that are from the same post. To
 You can also do it for pages like so :
 
 {% raw %}
-~~~ liquid
+
+```liquid
 {% if posts.size == 0 %}
   {% assign posts=site.pages | where:"i18n-link", page.i18n-link | sort: 'lang' %}
 {% endif %}
-~~~
+```
+
 {% endraw %}
 
-Now let's use our new `posts` variable : 
+Now let's use our new `posts` variable :
 
 {% raw %}
-~~~ html
+
+```html
 <div class="lang">
   <ul>
     {% for post in posts %}
-      <li><a class="{{ post.lang }}" href="{{ site.base-url }}{{ post.url }}">{{ post.lang }}</a></li>
+    <li>
+      <a class="{{ post.lang }}" href="{{ site.base-url }}{{ post.url }}"
+        >{{ post.lang }}</a
+      >
+    </li>
     {% endfor %}
   </ul>
 </div>
-~~~
+```
+
 {% endraw %}
 
 And that's it. It will display a link for every translation found of our current page.
@@ -173,21 +184,25 @@ And that's it. It will display a link for every translation found of our current
 Because I am in a good mood today, here is the complete code :
 
 {% raw %}
-~~~ html
-{% assign posts=site.posts | where:"i18n-link", page.i18n-link | sort: 'lang' %}
 
-{% if posts.size == 0 %}
-  {% assign posts=site.pages | where:"i18n-link", page.i18n-link | sort: 'lang' %}
-{% endif %}
+```html
+{% assign posts=site.posts | where:"i18n-link", page.i18n-link | sort: 'lang' %}
+{% if posts.size == 0 %} {% assign posts=site.pages | where:"i18n-link",
+page.i18n-link | sort: 'lang' %} {% endif %}
 
 <div class="lang">
   <ul>
     {% for post in posts %}
-      <li><a class="{{ post.lang }}" href="{{ site.base-url }}{{ post.url }}">{{ post.lang }}</a></li>
+    <li>
+      <a class="{{ post.lang }}" href="{{ site.base-url }}{{ post.url }}"
+        >{{ post.lang }}</a
+      >
+    </li>
     {% endfor %}
   </ul>
 </div>
-~~~
+```
+
 {% endraw %}
 
 ### Jekyll configuration
@@ -196,29 +211,26 @@ We have a good folder structure and a nice post translation visualization. Now l
 
 What we want to do is set our variables depending of the current translation. Because our way to work use folders, we will also use them to detect the language.
 
-~~~ yaml
+```yaml
 defaults:
-    -
-     scope:
-         path: ""
-     values:
-         author: "me"
-         layout: myLayout
-         lang: en
-         base-url: "/"
-    -
-     scope:
-         path: fr
-     values:
-         lang: fr
-         base-url: "/fr/"
-    -
-     scope:
-         path: ch
-     values:
-         lang: ch
-         base-url: "/ch/"
-~~~
+  - scope:
+      path: ""
+    values:
+      author: "me"
+      layout: myLayout
+      lang: en
+      base-url: "/"
+  - scope:
+      path: fr
+    values:
+      lang: fr
+      base-url: "/fr/"
+  - scope:
+      path: ch
+    values:
+      lang: ch
+      base-url: "/ch/"
+```
 
 The `defaults` yaml variable is set by scope. One scope per translation. The default scope here is `en`, where we will define all our default variables for our application. Then we just override them for each scope. Our posts will now get `lang` and `base-url` variables defined depending of our translation.
 
@@ -226,27 +238,29 @@ The `defaults` yaml variable is set by scope. One scope per translation. The def
 
 We saw how to translation an entire post. But what if we want to translate our layout ?
 
-You might want to define where part of your layout have to be translated. To do so, we will again use Liquid variables. For example : 
+You might want to define where part of your layout have to be translated. To do so, we will again use Liquid variables. For example :
 
 {% raw %}
-~~~ liquid
+
+```liquid
 <h1>{{ site.t['title'][page.lang] }}</h1>
-~~~
+```
+
 {% endraw %}
 
 We again use our `page.lang` variable to get the current language, and use it as an index for our translation.
 
 Then, we just have to add our `site.t` array to the configuration file and populate it :
 
-~~~ yaml
+```yaml
 t:
-    title:
-        en: "Title"
-        fr: "Titre"
-    subtitle:
-        en: "Subtitle"
-        fr: "Sous-titre"
-~~~
+  title:
+    en: "Title"
+    fr: "Titre"
+  subtitle:
+    en: "Subtitle"
+    fr: "Sous-titre"
+```
 
 ## Conclusion
 

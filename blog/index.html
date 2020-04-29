@@ -4,28 +4,27 @@ i18n-link: index
 lang: en
 ---
 
-<div id="main" class="main">
-  <section class="blog">
-    <div class="container">
-      {% assign posts=paginator.posts | where:"lang", page.lang %}
-      {% for category in site.categories %}
-        {% if category[0] == "en" %}
-          <h3>Blog, {{ category[0] }}</h3>
-          <div class="features">
-            {% for post in category[1] %}
-              <article>
-                {% include article-header.html %}
-                <div class="entry">
-                  {{ post.excerpt }}
-                </div>
-                <a class="button button-primary" href="{{ site.base-url }}{{ post.url }}">
-                  Read more <i class="fa fa-chevron-right"></i>
-                </a>
-              </article>
-            {% endfor %}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </section>
-</div>
+<section class="blog">
+  <div class="blog-container">
+    {% assign posts=paginator.posts | where:"lang", page.lang %}
+    {% for category in site.categories %}
+      {% if category[0] == "en" %}
+        <h2>Blog</h2>
+        <div class="blog-features">
+          {% for post in category[1] %}
+            <article class="blog-article">
+              {% capture entry %}
+                {{ post.excerpt }}
+              {% endcapture %}
+              {% include article-blog.html shot-text=entry %}
+              <a class="button button-primary" href="{{ site.base-url }}{{ post.url }}">
+                Read more
+                <i class="fa fa-chevron-right"></i>
+              </a>
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

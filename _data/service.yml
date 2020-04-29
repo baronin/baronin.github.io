@@ -1,0 +1,63 @@
+web-title:
+  en:
+    title: Web Development
+    service: My Services
+  ua:
+    title: Веб-разработка
+    service: Мои Услуги
+services:
+  development:
+    - service: HTML coding
+    - service: Programming languages
+    - service: Libraries
+    - service: Automation
+    - service: Packet Manager
+    - service: Tools
+    - service: Git
+  webdesign:
+    - service: Photoshop
+    - service: AI
+    - service: Figma
+  en:
+    - servicename: Web Development
+    - servicename: Web design
+  ua:
+    - servicename: Веб-разработка
+    - servicename: Веб-дизайн
+markup:
+  - technology: HTML
+  - technology: CSS3/SCSS
+  - technology: TWIG/PUG
+  - technology: BOOTSTRAP/BULMA
+language:
+  - technology: JavaScript/TypeScript
+  - technology: PHP
+library:
+  - technology: jQuery/React
+  - technology: AJAX/JSON
+automation:
+  - technology: Gulp
+  - technology: Webpack
+packetManager:
+  - technology: npm
+  - technology: yarn
+tools:
+  - technology: Webstorm
+  - technology: Postman
+git:
+  - technology: GitHub
+  - technology: Gitlab
+  - technology: Bitbucket
+iconsPath:
+  - url: html
+  - url: css
+  - url: js
+  - url: npm
+  - url: gulp
+  - url: webstorm
+  - url: react
+
+
+
+
+

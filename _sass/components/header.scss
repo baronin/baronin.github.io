@@ -1,177 +1,55 @@
+@import "../../_sass/common/mixins";
+@import "../../_sass/common/vars";
+@import "../../_sass/common/functions";
+
 .header {
-  p {
-    color: _palette(fg-light);
-    position: relative;
-    margin: 0 0 (_size(element-margin) * 0.75) 0;
+  width: 100%;
+}
+
+.header-top {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 _indents(small);
+  background-color: _palette(header, bgdark);
+  z-index: 1;
+  @include desktop {
+    width: calc(100% - 368px);
+  }
+  @include fhd {
+    width: calc(100% - 490px);
   }
 
-  h2 + p {
-    font-size: 1.25em;
-    margin-top: -0.5em;
-    line-height: 1.5em;
-  }
+  .lang {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
 
-  h3 + p {
-    font-size: 1.1em;
-    margin-top: -0.35em;
-    line-height: 1.5em;
-  }
-
-  h4 + p,
-  h5 + p,
-  h6 + p {
-    font-size: 0.9em;
-    margin-top: -0.25em;
-    line-height: 1.5em;
-  }
-
-  &.major {
-    h2 {
-      color: _palette(accent1, bg);
-      font-size: 3.5em;
-
-      & + p {
-        color: _palette(fg-bold);
-        font-size: 1.75em;
-        font-weight: _font(weight-bold);
-        margin-top: -0.75em;
-      }
+    a {
+      padding: 5px 10px;
     }
   }
 }
 
-/* Header */
+.header-logo-link {
+  display: block;
+  font-size: $font-size-xmedium;
+  font-weight: bold;
+}
 
-.header {
-  @include vendor('display', 'flex');
-  @include vendor('flex-direction', 'column');
-  @include vendor('justify-content', 'space-between');
-  background: _palette(header, bg);
-  color: _palette(header, fg);
-  height: 100%;
-  overflow-y: auto;
-  position: fixed;
-  text-align: center;
-  top: 0;
-  width: $size-header;
-
-  @if _misc(header-side) == 'right' {
-    right: 0;
-  } @else {
-    left: 0;
+.header-image {
+  height: 192px;
+  @include fhd {
+    height: 192px * 2;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    color: _palette(header, fg-bold);
-
-    a {
-      color: _palette(header, fg-bold);
-    }
-  }
-
-  header {
-    p {
-      color: _palette(header, fg-light);
-    }
-  }
-
-  a {
-    color: _palette(header, fg);
-
-    &:hover {
-      color: _palette(header, fg-bold) !important;
-    }
-  }
-
-  > header {
-    @include vendor('flex-shrink', '0');
-    padding: 3em;
-
-    .avatar {
-      display: block;
-      margin: 0 auto _size(element-margin) auto;
-      width: 8em;
-      height: 8em;
-
-      img {
-        object-fit: cover;
-        height: 100%;
-      }
-    }
-
-    h1 {
-      font-size: 1.75em;
-      margin: 0;
-    }
-
-    p {
-      color: _palette(header, fg);
-      font-style: italic;
-      margin: 1em 0 0 0;
-    }
-  }
-
-  > footer {
-    @include vendor('flex-shrink', '0');
-    bottom: 0;
-    left: 0;
-    padding: 2em;
+  img {
     width: 100%;
-
-  }
-
-  > nav {
-    @include vendor('flex-grow', '1');
-
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-
-      li {
-        border-top: solid _size(border-width) _palette(header, border);
-        display: block;
-        padding: 0;
-
-        a {
-          @include vendor('transition', 'none');
-          border: 0;
-          color: _palette(header, fg-bold) !important;
-          display: block;
-          padding: 0.85em 0;
-          text-decoration: none;
-
-          &.active {
-            background: _palette(bg);
-            color: _palette(header, bg) !important;
-          }
-        }
-
-        &:first-child {
-          border-top: 0;
-        }
-      }
-    }
-  }
-
-  .lang {
-    li {
-      display: inline-block;
-      margin: 10px;
-
-      a {
-        padding: 0 5px;
-        line-height: 1.7em;
-        font-weight: 300;
-        text-transform: lowercase;
-
-        &.en:lang(en), &.ua:lang(ua) {
-          font-weight: 700;
-          text-transform: uppercase;
-          color: #1f6350;
-        }
-      }
-    }
+    height: 100%;
+    object-fit: cover;
   }
 }
 

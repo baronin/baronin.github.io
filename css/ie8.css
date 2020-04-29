@@ -12,8 +12,8 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 .button {
-    position: relative;
-    -ms-behavior: url("../js/ie/PIE.htc");
+  position: relative;
+  -ms-behavior: url("../assets/js/ie/PIE.htc");
 }
 
 /* Form */
@@ -21,25 +21,25 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 select {
-    line-height: 2.75em;
+  line-height: 2.75em;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-    -moz-appearance: normal;
-    -webkit-appearance: normal;
-    -ms-appearance: normal;
-    appearance: normal;
+  -moz-appearance: normal;
+  -webkit-appearance: normal;
+  -ms-appearance: normal;
+  appearance: normal;
 }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-    padding: 0 0 0 1.5em;
+  padding: 0 0 0 1.5em;
 }
 
 input[type="checkbox"] + label:before,
 input[type="radio"] + label:before {
-    display: none;
+  display: none;
 }
 
 /* Button */
@@ -47,5 +47,5 @@ input[type="submit"].alt,
 input[type="reset"].alt,
 input[type="button"].alt,
 .button.alt {
-    border: solid 2px #e4e4e4;
+  border: solid 2px #e4e4e4;
 }

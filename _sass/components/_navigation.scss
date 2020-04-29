@@ -1,0 +1,252 @@
+@import "../common/vars";
+@import "../common/mixins";
+@import "../common/functions";
+
+$withSectionNavSmall: 320px;
+$withSectionNavMedium: 368px;
+$withSectionNavLarge: 490px;
+
+
+.section-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  max-width: $withSectionNavSmall;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  right: -$withSectionNavSmall;
+  text-align: center;
+  color: $color-white;
+  background-color: _palette(header, bg);
+  transition: right 0.3s;
+  z-index: 2000;
+  @include tablet {
+    max-width: $withSectionNavMedium;
+    right: -$withSectionNavMedium;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    overflow-x: auto;
+  }
+  @include fhd {
+    max-width: $withSectionNavLarge;
+  }
+
+  nav {
+    a {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      padding: 16px 0;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: $font-size-xmedium;
+      color: $color-white;
+      border-bottom: 1px solid transparent;
+      opacity: 0;
+      transform: translateX(50%);
+      transition: color .5s ease, padding .5s ease;
+      @include desktop {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      &:focus,
+      &:hover {
+        font-weight: bold;
+        background-color: #48ba9b;
+        border-bottom: 1px solid _palette(accent1, bg);
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        transition: width 0s ease;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background: #3bc1a0;
+        transition: width .5s ease;
+      }
+
+
+      /**
+       * animation line underline
+       */
+      &:hover {
+        &:before {
+          width: 0;
+          background: _palette(accent1, bg);
+          transition: width .5s ease;
+        }
+
+        &:after {
+          width: 0;
+          background: _palette(nav, bgclink);
+          transition: width .6s ease;
+        }
+      }
+
+      &:nth-child(2) {
+        transition: opacity .5s .2s, transform .5s .2s;
+      }
+      &:nth-child(3) {
+        transition: opacity .5s .3s, transform .5s .3s;
+      }
+      &:nth-child(4) {
+        transition: opacity .5s .4s, transform .5s .4s;
+      }
+      &:nth-child(5) {
+        transition: opacity .5s .5s, transform .5s .5s;
+      }
+      &:nth-child(6) {
+        transition: opacity .5s .6s, transform .5s .6s;
+      }
+      &:nth-child(7) {
+        transition: opacity .5s .7s, transform .5s .7s;
+      }
+    }
+  }
+}
+
+.nav-toggle {
+  position: absolute;
+  right: $withSectionNavSmall;
+  top: 0;
+  padding: 10px 20px;
+  background: inherit;
+  color: $color-white;
+  cursor: pointer;
+  z-index: 2001;
+  transition: color .25s ease-in-out;
+  @include tablet {
+    right: $withSectionNavMedium;
+  }
+  @include desktop {
+    display: none;
+  }
+  @include fhd {
+    right: $withSectionNavLarge;
+  }
+  &:after {
+    content: '\2630';
+    text-decoration: none;
+    font-size: 24px;
+  }
+  &:hover {
+    color: #f4f4f4;
+  }
+}
+
+.section-header-top {
+  padding: 32px;
+
+  h2 {
+    font-size: $font-size-medium;
+    opacity: 0;
+    transform: scale(0.1, 0.1);
+    transform-origin: 0 0;
+    transition: opacity 0.8s, transform 0.8s;;
+    @include desktop {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+    @include desktop {
+      opacity: 1;
+    }
+  }
+}
+
+.header-avatar {
+  display: block;
+  margin: 0 auto 36px auto;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+[id='nav-toggle'] {
+  position: absolute;
+  display: none;
+}
+[id='nav-toggle']:checked ~ .section-nav .section-header-top h2,
+[id='nav-toggle']:checked ~ .section-nav .section-header-top h2 a {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+[id='nav-toggle']:checked ~ .section-nav > .nav-toggle {
+  position: fixed;
+  left: auto;
+  right: 2px;
+  top: 1em;
+}
+[id='nav-toggle']:checked ~ .section-nav {
+  right: 0;
+  box-shadow: -4px 0px 20px 0px rgba(0,0,0, 0.5);
+  overflow-y: auto;
+}
+[id='nav-toggle']:checked ~ .section-nav > .nav-toggle:after {
+  content: '\2715';
+}
+[id='nav-toggle']:checked ~ .section-nav > nav > a {
+  opacity: 1;
+  transform: translateX(0);
+}
+[id='nav-toggle']:checked ~ .wrapper {
+  transform: translateX(-$withSectionNavSmall);
+  @include tablet{
+    transform: translateX(-$withSectionNavMedium);
+  }
+  @include fhd {
+    transform: translateX(-$withSectionNavLarge);
+  }
+}
+
+.section-nav-footer {
+  margin-top: auto;
+}
+/*
+.mask-content {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    opacity: 0;
+}
+[id='nav-toggle']:checked ~ .mask-content {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s, visibility .5s;
+}*/

@@ -36,16 +36,16 @@
 
   .project {
     h4 {
-      margin-top: _indents(mobile);
+      margin-top: _indents(small);
     }
 
     .inner {
-      margin-bottom: _indents(mobile);
+      margin-bottom: _indents(small);
     }
 
     &__created {
       font-size: _fontSize(x-small);
-      margin: _indents(mobile) 0;
+      margin: _indents(small) 0;
     }
 
     &__technology {

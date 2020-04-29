@@ -1,0 +1,51 @@
+@import "../../_sass/common/vars";
+@import "../../_sass/common/functions";
+@import "../../_sass/common/mixins";
+
+.project-container {
+  @include container();
+
+  .button {
+    margin-top: 20px;
+    @include sm-mobile {
+      margin-top: 25px;
+    }
+  }
+
+  h1 {
+    margin-top: _indents(medium);
+    margin-bottom: _indents(medium);
+  }
+}
+
+.project-article {
+  @include sm-mobile {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.project-article-image-wrap,
+.project-article-content {
+  @include sm-mobile {
+    width: 50%;
+  }
+}
+
+.project-article-content {
+  h5 {
+    margin-top: _indents(small);
+  }
+  @include sm-mobile {
+    padding-left: _indents(medium);
+  }
+}
+
+.project-article-image {
+  display: inline-block;
+  margin-bottom: _indents(small);
+
+  img {
+    width: 100%;
+  }
+}

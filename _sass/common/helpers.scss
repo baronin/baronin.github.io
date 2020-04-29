@@ -1,0 +1,14 @@
+@import "../../_sass/common/mixins";
+.is-overflow-x {
+  overflow-x: auto;
+}
+
+.container {
+  @include container();
+}
+
+.test-div {
+  padding: 5px 0;
+  background-color: palevioletred;
+  color: white;
+}

@@ -2,6 +2,7 @@
 layout: default
 i18n-link: index
 lang: en
+title: My Blog
 categories: [blog, travel]
 tags: [hot, summer]
 ---
@@ -9,7 +10,6 @@ tags: [hot, summer]
 <div id="main">
   <section id="three">
     <div class="container">
-
       {% assign posts=paginator.posts | where:"lang", page.lang %}
       <h2>Blog</h2>
       <div style="background: #0FA0CE">
@@ -37,7 +37,7 @@ tags: [hot, summer]
           <h3>{{ tag[0] }}</h3>
           {% for post in site.posts %}
             <article>
-              {% include article-header.html %}
+              {% include article-blog.html %}
               <div class="entry">
                 {{ post.excerpt }}
                 <a class="button primary" href="{{ site.base-url }}{{ post.url }}">Read more <i

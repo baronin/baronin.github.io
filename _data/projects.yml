@@ -1,0 +1,118 @@
+
+PATH_IMG:
+  - barbershop: /assets/images/projects/barbershop.jpg
+    lynx: /assets/images/projects/lynx.jpg
+
+link:
+  - lynx: https://lynx.org.ua/
+    barbershop: https://garagebarbershop.net.ua/
+
+EN:
+  - name: Hundae Electric
+    description: Projector Sales Site.
+    technologies:
+      - technology: HTML/Responsive
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: JavaScript
+      - technology: NPM
+      - technology: Gulp
+      - technology: Github
+      - technology: Validation
+    madeBy: The project was created in 2020
+    link: https://hundae-electric.netlify.app/
+    pathImg: /assets/images/projects/hundae.jpg
+
+  - name: Fire safety
+    description: INTEGRATED PROTECTION AND TECHNICAL SUPPORT OF OBJECT SAFETY SYSTEMS.
+    technologies:
+      - technology: HTML/Responsive
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: JavaScript
+      - technology: NPM
+      - technology: Gulp
+      - technology: Github
+    madeBy: The project was created in 2020
+    link: https://fire-safety.netlify.com/
+    pathImg: /assets/images/projects/fire-safety.jpg
+
+  - name: Lynx (Sports and entertainment center)
+    description: Online playground where you can find out what services the provides, price, contacts, map.
+    technologies:
+      - technology: HTML/CSS3/SCSS
+      - technology: Design
+      - technology: JQuery/JavaScript
+      - technology: NPM/Gulp
+      - technology: Github
+      - technology: Google Analytic
+    madeBy: The project was created in 2019
+    link: https://lynx.org.ua/
+    pathImg: /assets/images/projects/lynx.jpg
+
+  - name: Barbershop
+    description: Online playground where you can find out what services the provides, price, contacts, map. Also there is a convenient CMS MODX for content management.
+    technologies:
+      - technology: HTML
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: Google Analytic
+      - technology: MODX
+    madeBy: The project was created in 2018
+    link: https://garagebarbershop.net.ua/
+    pathImg: /assets/images/projects/barbershop.jpg
+
+UA:
+  - name: Hundae Electric
+    description: Сайт по продажам проекторов.
+    technologies:
+      - technology: HTML/Responsive
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: JavaScript
+      - technology: NPM
+      - technology: Gulp
+      - technology: Github
+      - technology: Validation
+    madeBy: Проект створений у 2020р.
+    link: https://hundae-electric.netlify.app/
+    pathImg: /assets/images/projects/hundae.jpg
+
+  - name: Пожбезопасность
+    description: Cистемы пожарной безопасности
+    technologies:
+      - technology: HTML/Responsive
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: JavaScript
+      - technology: NPM
+      - technology: Gulp
+      - technology: Github
+    madeBy: Проект створений у 2020р.
+    link: https://fire-safety.netlify.com/
+    pathImg: /assets/images/projects/fire-safety.jpg
+
+  - name: Lynx (Спортивно-розважальний центр)
+    description: Онлайн майданчик де можна дізнатися які послуги надає сервіс, ціну, контакти, карта.
+    technologies:
+      - technology: HTML/CSS3/SCSS
+      - technology: Design
+      - technology: JQuery/JavaScript
+      - technology: NPM/Gulp
+      - technology: Github
+      - technology: Google Analytic
+    madeBy: Проект створений у 2019 році
+    link: https://lynx.org.ua/
+    pathImg: /assets/images/projects/lynx.jpg
+
+  - name: Барбершоп
+    description: Онлайн майданчик де можна дізнатися які послуги надає сервіс, ціну, контакти, карта. Так само є зручна CMS MODX для управління контентом.
+    technologies:
+     - technology: HTML
+     - technology: CSS3/SCSS
+     - technology: JQuery
+     - technology: Google Analytic
+     - technology: MODX
+    madeBy: Проект створений у 2018 році
+    link: https://garagebarbershop.net.ua/
+    pathImg: /assets/images/projects/barbershop.jpg

@@ -1,0 +1,48 @@
+@import "../../_sass/common/vars";
+@import "../../_sass/common/functions";
+@import "../../_sass/common/mixins";
+
+.blog {
+  .blog-container {
+    @include container();
+  }
+}
+
+.blog-article {
+  .button {
+    margin-top: 20px;
+    @include sm-mobile {
+      margin-top: 25px;
+    }
+  }
+}
+
+.blog-content-wrap {
+  @include sm-mobile {
+    display: flex;
+  }
+}
+
+.blog-content {
+  @include sm-mobile {
+    flex-shrink: 0;
+    max-width: 50%;
+    width: 100%;
+    padding-right: 20px;
+  }
+}
+
+.article-image {
+  height: 124px;
+  border-right: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blog-meta {
+  margin-top: 3px;
+}
+
+.blog-entry {
+  margin-bottom: _indents(small);
+}
