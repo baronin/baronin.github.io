@@ -1,20 +1,27 @@
 ---
-title: "About me"
-layout: "page"
-i18n-link: "about"
+layout: page
+i18n-link: hello
 ---
 
 # About me
+Hi friends, my name is Yaroslav and I love the frontend.
 
-Hey ! I am Yaroslav Baronin, a 30 years old developper living in the Kremenchug. Apparently you got lost on my website but, hey, **stay calm** ! Everything will be ok.
+I live in Ukraine.
 
-### My goal
+I started my first steps in 2016, I passed a course on front-end development.
 
-I taking courses on IT-kamasutra to be a react developer.
-I work in web developers, UI department.
-I love the front-end and often working to find the best optimized code for the project.
+In 2017, I had my first remote job, a markup for online shops.
 
-### My website
+In 2018, I settled into a web studio where I worked for 3 months and went to courses at the very cool company Altexsoft.
 
+At the end of 2018 I finished my courses, internships and started working at this company. Worked before the COVID-19 pandemic. I learned a lot there, for which I thank you very much.
+And now I can work on your project with excellent experience in working with an IT company.
+
+Here is my little story :)
+I wish all the rays good and positive!
+Best regards baronin.pro.
+
+
+#### My website
 This website is entirerly **open sourced**, so feel free to have a look inside via my GitHub. You can, also, send me issues if anything here is not working well for you.
 I will always try to answer you as fast as possible!

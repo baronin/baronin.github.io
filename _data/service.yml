@@ -30,7 +30,7 @@ markup:
   - technology: TWIG/PUG
   - technology: BOOTSTRAP/BULMA
 language:
-  - technology: JaveScript/TypeScript
+  - technology: JavaScript/TypeScript
   - technology: PHP
 library:
   - technology: jQuery/React

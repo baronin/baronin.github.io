@@ -1,5 +1,10 @@
+@import "../../_sass/common/mixins";
 .is-overflow-x {
   overflow-x: auto;
+}
+
+.container {
+  @include container();
 }
 
 .test-div {

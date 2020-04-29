@@ -8,13 +8,28 @@ link:
     barbershop: https://garagebarbershop.net.ua/
 
 EN:
+  - name: Hundae Electric
+    description: Projector Sales Site.
+    technologies:
+      - technology: HTML/Responsive
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: JavaScript
+      - technology: NPM
+      - technology: Gulp
+      - technology: Github
+      - technology: Validation
+    madeBy: The project was created in 2020
+    link: https://hundae-electric.netlify.app/
+    pathImg: /assets/images/projects/hundae.jpg
+
   - name: Fire safety
     description: INTEGRATED PROTECTION AND TECHNICAL SUPPORT OF OBJECT SAFETY SYSTEMS.
     technologies:
       - technology: HTML/Responsive
       - technology: CSS3/SCSS
       - technology: JQuery
-      - technology: JaveScript
+      - technology: JavaScript
       - technology: NPM
       - technology: Gulp
       - technology: Github
@@ -27,7 +42,7 @@ EN:
     technologies:
       - technology: HTML/CSS3/SCSS
       - technology: Design
-      - technology: JQuery/JaveScript
+      - technology: JQuery/JavaScript
       - technology: NPM/Gulp
       - technology: Github
       - technology: Google Analytic
@@ -48,17 +63,32 @@ EN:
     pathImg: /assets/images/projects/barbershop.jpg
 
 UA:
+  - name: Hundae Electric
+    description: Сайт по продажам проекторов.
+    technologies:
+      - technology: HTML/Responsive
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: JavaScript
+      - technology: NPM
+      - technology: Gulp
+      - technology: Github
+      - technology: Validation
+    madeBy: Проект створений у 2020р.
+    link: https://hundae-electric.netlify.app/
+    pathImg: /assets/images/projects/hundae.jpg
+
   - name: Пожбезопасность
     description: Cистемы пожарной безопасности
     technologies:
       - technology: HTML/Responsive
       - technology: CSS3/SCSS
       - technology: JQuery
-      - technology: JaveScript
+      - technology: JavaScript
       - technology: NPM
       - technology: Gulp
       - technology: Github
-    madeBy: Проект створений у 2020
+    madeBy: Проект створений у 2020р.
     link: https://fire-safety.netlify.com/
     pathImg: /assets/images/projects/fire-safety.jpg
 
@@ -67,7 +97,7 @@ UA:
     technologies:
       - technology: HTML/CSS3/SCSS
       - technology: Design
-      - technology: JQuery/JaveScript
+      - technology: JQuery/JavaScript
       - technology: NPM/Gulp
       - technology: Github
       - technology: Google Analytic
