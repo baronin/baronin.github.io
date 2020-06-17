@@ -8,6 +8,49 @@ link:
     barbershop: https://garagebarbershop.net.ua/
 
 EN:
+  - name: Comfortable passenger transportation
+    description: Markup 3 pages
+    technologies:
+      - technology: HTML/Responsive
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: JavaScript
+      - technology: NPM
+      - technology: Gulp
+      - technology: Github
+    madeBy: The project was created in 2020
+    link: https://comfortable-transportation.netlify.app/
+    pathImg: /assets/images/projects/m1.jpg
+
+  - name: Homeform
+    description: Markup 11 pages
+    technologies:
+      - technology: HTML/Responsive
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: JavaScript
+      - technology: NPM
+      - technology: Gulp
+      - technology: Github
+    madeBy: The project was created in 2020
+    link: https://home-form.netlify.app/
+    pathImg: /assets/images/projects/homeforms.jpg
+
+  - name: Prosto-kuxni
+    description: Projector Sales Site.
+    technologies:
+      - technology: HTML/Responsive
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: JavaScript
+      - technology: NPM
+      - technology: Gulp
+      - technology: Github
+      - technology: Wordpress
+    madeBy: The project was created in 2020
+    link: http://prosto-kuxni.ru/
+    pathImg: /assets/images/projects/kuxni.jpg
+
   - name: Hundae Electric
     description: Projector Sales Site.
     technologies:
@@ -63,6 +106,49 @@ EN:
     pathImg: /assets/images/projects/barbershop.jpg
 
 UA:
+  - name: Комфортные перевозки пассажиров
+    description: Верстка 3 страниц
+    technologies:
+      - technology: HTML/Responsive
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: JavaScript
+      - technology: NPM
+      - technology: Gulp
+      - technology: Github
+    madeBy: Проект створений у 2020
+    link: https://comfortable-transportation.netlify.app/
+    pathImg: /assets/images/projects/m1.jpg
+
+  - name: Homeform
+    description: Верстка 11 страниц
+    technologies:
+      - technology: HTML/Responsive
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: JavaScript
+      - technology: NPM
+      - technology: Gulp
+      - technology: Github
+    madeBy:  Проект створений у 2020
+    link: https://home-form.netlify.app/
+    pathImg: /assets/images/projects/homeforms.jpg
+
+  - name: Prosto-kuxni
+    description: Kitchens to order.
+    technologies:
+      - technology: HTML/Responsive
+      - technology: CSS3/SCSS
+      - technology: JQuery
+      - technology: JavaScript
+      - technology: NPM
+      - technology: Gulp
+      - technology: Github
+      - technology: Wordpress
+    madeBy: Проект створений у 2020 р.
+    link: http://prosto-kuxni.ru/
+    pathImg: /assets/images/projects/kuxni.jpg
+
   - name: Hundae Electric
     description: Сайт по продажам проекторов.
     technologies:

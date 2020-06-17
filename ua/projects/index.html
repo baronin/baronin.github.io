@@ -23,7 +23,9 @@ i18n-link: "projects"
       </ul>
       <p class="project-created">{{ project.madeBy }}</p>
     </div>
-    <a class="button button-primary" href="{{ project.link }}">Перети на сайт</a>
+    <div class="project-article-btn-wrap">
+      <a class="button button-primary" href="{{ project.link }}">Перейти на сайт</a>
+    </div>
   </article>
 {% endfor %}
 
