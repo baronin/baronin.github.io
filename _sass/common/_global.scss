@@ -98,4 +98,9 @@ article {
   &:first-child {
     border-top: none;
   }
+  @include tablet {
+    &:first-child {
+      border-top: solid 3px $color-light-gray;
+    }
+  }
 }
