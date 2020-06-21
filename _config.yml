@@ -1,4 +1,4 @@
-name: Baronin
+name: "Front-end developer. Yaroslav Baronin"
 paginate: 5
 url: "https://baronin.github.io/"
 github-url: "https://github.com/baronin/baronin.github.io"
@@ -64,8 +64,8 @@ t:
     en: "Fork it on github"
     ua: "Викладіть його на github"
   desc:
-    en: "My personnal website. Yaroslav Baronin"
-    ua: "Мій особистий веб-сайт. Ярослав Баронін"
+    en: "Front-end developer. Yaroslav Baronin"
+    ua: "Веб-мастер. Ярослав Баронін"
   download:
     en: "Download CV"
     ua: "Завантажити резюме"
