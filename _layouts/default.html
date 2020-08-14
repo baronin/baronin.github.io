@@ -13,8 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <title>{% if page.title %} {{ page.title }} - {% endif %}{{ site.name }}</title>
 
-  <meta name="description"
-        content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.t['desc'][page.lang] }}{% endif %}"/>
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="theme-color" content="#7CB342">
 
@@ -27,6 +26,8 @@
   {% endif %}
 
   <meta name="keywords" content="Вёрстка, HTML, CSS, Блог, Фронт-етд, Веб в Кременчуге, Ментор бессплатно">
+  <meta name="description"
+        content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.t['desc'][page.lang] }}{% endif %}"/>
   <meta name="description" content="Блог о процессе обучения веб-технологиям">
   <link rel="apple-touch-icon" href="{{ site.base-url }}/apple-touch-icon.png"/>
 
