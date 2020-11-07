@@ -4,10 +4,7 @@
 .wrapper {
   transition: left 0.4s;
   @include desktop {
-    width: calc(100% - 368px);
-  }
-  @include fhd {
-    width: calc(100% - 490px);
+    width: calc(100% - 320px);
   }
 }
 

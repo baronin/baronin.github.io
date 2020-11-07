@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "bundle exec jekyll serve --incremental",
+    "start": "bundle exec jekyll serve --livereload",
     "watch": "gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""

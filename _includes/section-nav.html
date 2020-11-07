@@ -1,12 +1,12 @@
-<input type="checkbox" id="nav-toggle" hidden>
 <section class="section-nav">
-  <label for="nav-toggle" class="nav-toggle" onclick id="hamburger"></label>
-  <header class="section-header-top">
-    <span class="header-avatar"><img src="{{ site.base-url }}/assets/images/profile.jpg" alt="photo"/></span>
-    <h2><a href="/">Yaroslav Baronin</a></h2>
+  <h1 class="visible-hidden">Navigation</h1>
+  <button class="section-nav__btn-toggle" id="hamburger"></button>
+  <header class="section-nav__header">
+    <span class="section-nav__header-avatar"><img src="{{ site.base-url }}/assets/images/profile.jpg" alt="photo"/></span>
+    <h2 class="section-nav__header-title"><a href="/">Yaroslav Baronin</a></h2>
   </header>
   {% include nav.html %}
-  <footer class="section-nav-footer">
+  <footer class="section-nav__footer">
     {% include select-lang.html %}
     {% include social-link.html %}
   </footer>

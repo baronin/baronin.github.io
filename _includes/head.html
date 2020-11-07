@@ -1,0 +1,30 @@
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>{% if page.title %} {{ page.title }} - {% endif %}{{ site.name }}</title>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#7CB342">
+
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="{{ page.title }}"/>
+  <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
+  {% if page.img %}
+  <meta property="og:image" content="{{ site.url }}{{ site.base-url }}/assets/images/posts/{{ page.img }}.png"/>
+  {% endif %}
+
+  <meta name="keywords" content="Вёрстка, HTML, CSS, Блог, Фронт-етд, Веб в Кременчуге, обучение">
+  <meta name="description"
+        content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.t['desc'][page.lang] }}{% endif %}"/>
+  <meta name="description" content="Блог о процессе обучения веб-технологиям">
+  <link rel="apple-touch-icon" href="{{ site.base-url }}/apple-touch-icon.png"/>
+
+  {% for postTrans in postsTrans %}
+  <link rel="alternate" hreflang="{{ postTrans.lang }}" href="{{ site.base-url }}{{ postTrans.url }}"/>
+  {% endfor %}
+  <link rel="stylesheet" href="{{ site.base-url }}/css/main.css"/>
+</head>

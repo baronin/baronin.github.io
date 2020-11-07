@@ -1,13 +1,13 @@
 {% assign title =  site.data.service['web-title'][page.lang].service %}
 <section class="service">
   {% for items in site.data.service['services'][page.lang] %}
-    <div class="service-items">
+    <div class="service__items">
       {% if items.servicename == "Веб-разработка" %}
-        <h2 class="service-title">{{ items.servicename }}</h2>
-        <ul class="service-list">
+        <h2 class="service__title">{{ items.servicename }}</h2>
+        <ul class="service__list">
           {% for service in site.data.service.services.development %}
-            <li class="service-item">
-              <div class="service-item-icon">
+            <li class="service__item">
+              <div class="service__item-icon">
                 {% assign handle  = service.service %}
                 {% case handle %}
                 {% when 'HTML coding' %}
@@ -28,7 +28,7 @@
                   {% include progress-bar.html value="0.87" size="70" icon="html" %}
                 {% endcase %}
               </div>
-              <div class="service-item-content">
+              <div class="service__item-content">
                 <h4>{{ service.service }}</h4>
                 <ul class="skills-list">
                   {% assign skills = site.data.service %}
@@ -71,11 +71,11 @@
         </ul>
       {% endif %}
       {% if items.servicename == "Web Development" %}
-        <h2 class="service-title">{{ items.servicename }}</h2>
-        <ul class="service-list">
+        <h2 class="service__title">{{ items.servicename }}</h2>
+        <ul class="service__list">
           {% for service in site.data.service.services.development %}
-            <li class="service-item">
-              <div class="service-item-icon">
+            <li class="service__item">
+              <div class="service__item-icon">
                 {% assign handle  = service.service %}
                 {% case handle %}
                 {% when 'HTML coding' %}
@@ -96,7 +96,7 @@
                   {% include progress-bar.html value="0.87" size="70" icon="html" %}
                 {% endcase %}
               </div>
-              <div class="service-item-content">
+              <div class="service__item-content">
                 <h4>{{ service.service }}</h4>
                 <ul class="skills-list">
                   {% assign skills = site.data.service %}
@@ -139,11 +139,11 @@
         </ul>
       {% endif %}
       {% if items.servicename == "Веб-дизайн" %}
-        <h2 class="service-title">{{ items.servicename }}</h2>
-        <ul class="service-list -web-design">
+        <h2 class="service__title">{{ items.servicename }}</h2>
+        <ul class="service__list -web-design">
           {% for webdesign in site.data.service.services.webdesign %}
-            <li class="service-item">
-              <div class="service-item-icon">
+            <li class="service__item">
+              <div class="service__item-icon">
                 {% assign handle  = webdesign.service %}
                 {% case handle %}
                 {% when 'Photoshop' %}
@@ -156,7 +156,7 @@
                   {% include progress-bar.html value="0.87" size="70" icon="html" %}
                 {% endcase %}
               </div>
-              <div class="service-item-content">
+              <div class="service__item-content">
                 <h4>{{ webdesign.service }}</h4>
               </div>
             </li>
@@ -164,11 +164,11 @@
         </ul>
       {% endif %}
       {% if items.servicename == "Web design" %}
-        <h2 class="service-title">{{ items.servicename }}</h2>
-        <ul class="service-list -web-design">
+        <h2 class="service__title">{{ items.servicename }}</h2>
+        <ul class="service__list -web-design">
           {% for webdesign in site.data.service.services.webdesign %}
-            <li class="service-item">
-              <div class="service-item-icon">
+            <li class="service__item">
+              <div class="service__item-icon">
                 {% assign handle  = webdesign.service %}
                 {% case handle %}
                 {% when 'Photoshop' %}
@@ -181,7 +181,7 @@
                   {% include progress-bar.html value="0.87" size="70" icon="html" %}
                 {% endcase %}
               </div>
-              <div class="service-item-content">
+              <div class="service__item-content">
                 <h4>{{ webdesign.service }}</h4>
               </div>
             </li>
