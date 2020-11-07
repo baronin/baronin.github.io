@@ -16,6 +16,7 @@ cd baronin.github.io
 bundle exec jekyll serve
 Incremental build: disabled. Enable with --incremental
 bundle exec jekyll serve --incremental
+bundle exec jekyll serve --livereload
 ```
 
 Open http://127.0.0.1:4000/ in your prefereted navigator, and... It should be working !
@@ -36,11 +37,9 @@ If you find any errors on this website or maybe just want to improve something, 
 
 ## Plugins
 
-https://ionicons.com/
-
 https://github.com/kottenator/jquery-circle-progress
 
-`all images in foolfer`
+`all images in footer`
 {% for image in site.static_files %}
 {% if image.path contains 'images/projects.yml' %}
 <img src="{{ site.base-url }}{{ image.path }}">

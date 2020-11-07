@@ -1,6 +1,7 @@
+@import "../../_sass/common/mixins";
+@import "../../_sass/common/functions";
+
 /* List */
-
-
 ul {
   &.alt {
     list-style: none;

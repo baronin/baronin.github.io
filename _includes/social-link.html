@@ -6,10 +6,10 @@
            href=" {{ link.link }}"
            aria-label="{{ link.name }}"
            rel="noreferrer"
+           target="_blank"
            >
-          <ion-icon name="{{ link.icon }}" class="icon"></ion-icon>
         <span>{{ link.name }}</span>
-          <i></i>
+          <i class="{{ link.icon }}"></i>
         </a>
       </li>
     {% endfor %}

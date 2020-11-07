@@ -8,7 +8,7 @@ Hi friends, my name is Yaroslav and I love the frontend.
 
 I live in Ukraine.
 
-I started my first steps in 2016, I passed a course on front-end development.
+My first steps started in 2016, I passed a course on front-end development.
 
 In 2017, I had my first remote job, a markup for online shops.
 

@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.header-top {
+.header__top {
   position: fixed;
   left: 0;
   width: 100%;
@@ -17,10 +17,7 @@
   background-color: _palette(header, bgdark);
   z-index: 1;
   @include desktop {
-    width: calc(100% - 368px);
-  }
-  @include fhd {
-    width: calc(100% - 490px);
+    width: calc(100% - 320px);
   }
 
   .lang {
@@ -34,13 +31,13 @@
   }
 }
 
-.header-logo-link {
+.header__logo-link {
   display: block;
   font-size: $font-size-xmedium;
   font-weight: bold;
 }
 
-.header-image {
+.header__bg {
   height: 192px;
   @include fhd {
     height: 192px * 2;

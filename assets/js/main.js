@@ -1,14 +1,15 @@
-(function () {
-  // add click animation to social links
-  var socials = document.querySelectorAll("[class*=social_lnk]");
-  var i = socials.length;
-  var cls = "-clicked";
+'use stict';
+let socialNetworksClass = document.querySelector('.social-networks');
+if (socialNetworksClass) {
+  let socials = document.querySelectorAll("[class*=social_lnk]");
+  let i = socials.length;
+  let cls = "-clicked";
   while (i--) {
     socials[i].addEventListener(
       "click",
       function (e) {
-        var target = e.target;
-        var lnk = target.classList.contains("social_lnk")
+        let target = e.target;
+        let lnk = target.classList.contains("social_lnk")
           ? target
           : target.parentElement;
         lnk.classList.add(cls);
@@ -22,7 +23,7 @@
       false
     );
   }
-})();
+}
 
 function Circle(el, color) {
   $(el)
@@ -36,4 +37,36 @@ function Circle(el, color) {
     });
 }
 
-Circle(".progress-bar-round", "#4acaa8");
+let serviceSection = document.querySelector('.service');
+if (serviceSection) {
+  Circle(".progress-bar-round", "#4acaa8");
+}
+
+// hamburgerId menu
+let body = document.querySelector('body')
+let sectionNav = document.querySelector('.section-nav');
+let hamburgerId = document.querySelector('#hamburger');
+let overlay = document.querySelector('.overlay');
+if (hamburgerId) {
+  function toggleMenu () {
+    sectionNav.classList.toggle('section-nav--active');
+    body.classList.toggle('scroll-lock');
+    overlay.classList.toggle('overlay--visibly');
+  }
+  hamburgerId.addEventListener('click', toggleMenu);
+}
+
+let outsideClick = (e) => {
+  if (e.target.classList.contains('overlay--visibly')) {
+    overlay.classList.remove('overlay--visibly');
+    body.classList.remove('scroll-lock');
+    sectionNav.classList.remove('section-nav--active');
+  }
+}
+
+document.addEventListener('click', outsideClick);
+let date = new Date().getFullYear();
+let dateClass = document.querySelector('.date');
+if (dateClass) {
+  dateClass.querySelector('span').innerHTML = date;
+}

@@ -81,11 +81,21 @@
   display:none;
 }
 .social-link i {
+  position: relative;
   display:block;
   width: 100%;
   height: 6rem;
   z-index: 5;
   background-color: transparent;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 30px;
+    height: 30px;
+  }
 }
 
 /* Individual social icons (works in IE) */
@@ -94,6 +104,9 @@
 
   &.linkedin {
     color: #007BB5;
+    i:before {
+      background-image: url(../assets/images/icons/socials/linkedin.svg);
+    }
   }
   &.linkedin::after,
   &.linkedin::before {
@@ -103,6 +116,9 @@
 
   &.instagram {
     color: #c1388f;
+    i:before {
+      background-image: url(../assets/images/icons/socials/instagram.svg);
+    }
   }
   &.instagram::after,
   &.instagram::before {
@@ -112,6 +128,9 @@
 
   &.facebook {
     color: #3C5193;
+    i:before {
+      background-image: url(../assets/images/icons/socials/facebook.svg);
+    }
   }
   &.facebook::after,
   &.facebook::before {
@@ -121,6 +140,9 @@
 
   &.vk {
     color: #4c75a3;
+    i:before {
+      background-image: url(../assets/images/icons/socials/vk.svg);
+    }
   }
   &.vk::after,
   &.vk::before {

@@ -6,14 +6,14 @@
   padding: _indents(small);
 }
 
-.service-items {
+.service__items {
   padding-bottom: _indents(medium);
   &:last-child {
     padding-bottom: 0;
   }
 }
 
-.service-list {
+.service__list {
   @include sm-mobile {
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +25,7 @@
   }
 
   &.-web-design {
-    .service-item-content {
+    .service__item-content {
       display: flex;
       align-items: center;
     }
@@ -35,7 +35,7 @@
   }
 }
 
-.service-item {
+.service__item {
   display: flex;
   width: 100%;
   padding: _indents(small) 0;
@@ -57,7 +57,7 @@
   }
 }
 
-.service-item-content {
+.service__item-content {
   margin-left: _indents(small);
 }
 
