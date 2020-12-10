@@ -19,7 +19,9 @@
   @include desktop {
     width: calc(100% - 320px);
   }
-
+  @include fhd {
+    width: calc(100% - 490px);
+  }
   .lang {
     margin-top: 10px;
     margin-bottom: 10px;
