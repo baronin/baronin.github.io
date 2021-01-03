@@ -1,7 +1,7 @@
 @import "../../_sass/common/mixins";
 @import "../../_sass/common/functions";
 
-.wrapper {
+.app {
   transition: left 0.4s;
   @include desktop {
     width: calc(100% - 320px);
