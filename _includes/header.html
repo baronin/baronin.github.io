@@ -4,6 +4,9 @@
     {% include select-lang.html %}
   </div>
     <div class="header__bg">
-      <img src="{{ site.base-url }}/assets/images/banner.jpg" alt="work place">
+      <picture>
+        <source media="(min-width: 800px)" srcset="{{ site.base-url }}/assets/images/banner.jpg">
+        <img src="{{ site.base-url }}/assets/images/test.jpg" alt="work place">
+      </picture>
     </div>
 </header>

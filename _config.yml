@@ -17,7 +17,7 @@ defaults:
       author: "Yaroslav Baronin"
       layout: post
       lang: en
-      base-url: "/"
+      base-url: "/en/"
   - scope:
       path: ua
     values:

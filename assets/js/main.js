@@ -44,7 +44,7 @@ if (serviceSection) {
 
 // hamburgerId menu
 let body = document.querySelector('body')
-let sectionNav = document.querySelector('.section-nav');
+let sectionNav = document.querySelector('.nav');
 let hamburgerId = document.querySelector('#hamburger');
 let overlay = document.querySelector('.overlay');
 if (hamburgerId) {

@@ -8,6 +8,7 @@
 
 .header__top {
   position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   display: flex;
@@ -40,6 +41,7 @@
 }
 
 .header__bg {
+  margin-top: 56px;
   height: 192px;
   @include fhd {
     height: 192px * 2;

@@ -4,7 +4,7 @@ PATH_IMG:
     lynx: /assets/images/projects/lynx.jpg
 
 link:
-  - lynx: https://lynx.org.ua/
+  - lynx: https://lynx-ua.netlify.app
     barbershop: https://garagebarbershop.net.ua/
 
 EN:
@@ -90,7 +90,7 @@ EN:
       - technology: Github
       - technology: Google Analytic
     madeBy: The project was created in 2019
-    link: https://lynx.org.ua/
+    link: https://lynx-ua.netlify.app
     pathImg: /assets/images/projects/lynx.jpg
 
   - name: Barbershop
@@ -188,7 +188,7 @@ UA:
       - technology: Github
       - technology: Google Analytic
     madeBy: Проект створений у 2019 році
-    link: https://lynx.org.ua/
+    link: https://lynx-ua.netlify.app
     pathImg: /assets/images/projects/lynx.jpg
 
   - name: Барбершоп

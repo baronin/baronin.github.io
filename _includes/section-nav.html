@@ -1,12 +1,26 @@
-<section class="section-nav">
+<section class="nav">
   <h1 class="visible-hidden">Navigation</h1>
-  <button class="section-nav__btn-toggle" id="hamburger"></button>
-  <header class="section-nav__header">
-    <span class="section-nav__header-avatar"><img src="{{ site.base-url }}/assets/images/profile.jpg" alt="photo"/></span>
-    <h2 class="section-nav__header-title"><a href="/">Yaroslav Baronin</a></h2>
+  <button class="nav__btn-toggle" id="hamburger"></button>
+  <header class="nav__header">
+    <span class="nav__header-avatar"><img src="{{ site.base-url }}/assets/images/profile.jpg" alt="photo"/></span>
+    <h2 class="nav__header-title"><a href="/">Yaroslav Baronin</a></h2>
   </header>
-  {% include nav.html %}
-  <footer class="section-nav__footer">
+  <span style="background: red">{{ page.base-url }}</span>
+  <span style="background: blue">test{{ site.defaults }}</span>
+  <nav class="main-nav">
+    <a class="main-nav__link" href="{{ page.base-url }}">{{ site.t['home'][page.lang] }}</a>
+    <a class="main-nav__link" href="{{ page.base-url }}blog/">{{ site.t['blog'][page.lang] }}</a>
+    <a class="main-nav__link" href="{{ page.base-url }}projects/">{{ site.t['project'][page.lang] }}</a>
+    <a class="main-nav__link" href="{{ page.base-url }}about/">{{ site.t['about-me'][page.lang] }}</a>
+    <a class="main-nav__link" href="{{ page.base-url }}contact/">{{ site.t['contact'][page.lang] }}</a>
+    <!-- <a href="{{ site.base-url }}/assets/CV/Yaroslav'sResume.pdf"
+       download="Yaroslav's Resume"
+
+       rel="noreferrer">
+      <i class="fa fa-download"></i> {{ site.t['download'][page.lang] }}
+    </a> -->
+  </nav>
+  <footer class="nav__footer">
     {% include select-lang.html %}
     {% include social-link.html %}
   </footer>
