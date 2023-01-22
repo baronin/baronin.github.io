@@ -1,33 +1,30 @@
 {
-  "name": "baronin.github.io",
-  "version": "1.0.0",
-  "description": "Portfolio",
-  "main": "index.js",
+  "name": "-baronin-github-io",
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "bundle exec jekyll serve --incremental",
-    "start": "bundle exec jekyll serve --livereload",
-    "watch": "gulp watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "format": "prettier .  --write"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/baronin/baronin.github.io.git"
+  "dependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.8.1",
+    "vue": "^3.2.45",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.6"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/baronin/baronin.github.io/issues"
-  },
-  "homepage": "https://github.com/baronin/baronin.github.io#readme",
-  "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^9.7.3",
-    "browser-sync": "^2.26.7",
-    "cssnano": "^4.1.10",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5"
+    "@babel/core": "^7.20.12",
+    "@babel/eslint-parser": "^7.19.1",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "prettier": "2.8.2",
+    "sass": "^1.57.1",
+    "vite": "^4.0.0",
+    "vite-plugin-pwa": "^0.14.1"
   }
 }

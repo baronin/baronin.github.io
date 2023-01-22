@@ -1,27 +1,36 @@
-# Файл с настройками для редактора.
-#
-# Если вы разрабатываете в редакторе WebStorm, BBEdit, Coda или SourceLair
-# этот файл уже поддерживается и не нужно производить никаких дополнительных
-# действий.
-#
-# Если вы ведёте разработку в другом редакторе, зайдите
-# на https://editorconfig.org и в разделе «Download a Plugin»
-# скачайте дополнение для вашего редактора.
-
 root = true
 
 [*]
 charset = utf-8
 end_of_line = lf
-indent_size = 2
+indent_size = 4
 indent_style = space
 insert_final_newline = true
+max_line_length = 120
+tab_width = 4
 trim_trailing_whitespace = true
 
-[*.md]
-trim_trailing_whitespace = false
+[*.scss]
+indent_size = 2
 
-[*.svg]
-indent_style = ignore
-trim_trailing_whitespace = false
-insert_final_newline = ignore
+[*.vue]
+indent_size = 2
+tab_width = 2
+
+[{*.ats,*.cts,*.mts,*.ts}]
+indent_size = 2
+tab_width = 2
+
+[{*.cjs,*.js}]
+indent_size = 2
+tab_width = 2
+
+[{*.har,*.jsb2,*.jsb3,*.json,.babelrc,.eslintrc,.prettierrc,.stylelintrc,bowerrc,jest.config}]
+indent_size = 2
+
+[{*.htm,*.html,*.ng,*.sht,*.shtm,*.shtml}]
+indent_size = 2
+tab_width = 2
+
+[{*.yaml,*.yml}]
+indent_size = 2
