@@ -80,7 +80,7 @@
   white-space: nowrap;
 }
 
-@mixin container($mw: 1200px, $px:15px) {
+@mixin container($mw: 700px, $px:15px) {
   max-width: $mw;
   width: 100%;
   padding-left: $px;

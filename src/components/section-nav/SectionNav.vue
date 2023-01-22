@@ -1,15 +1,22 @@
-<script setup>
-import { ref } from "vue";
+<script>
 import SwitchLang from "../switch-lang/SwitchLang.vue";
 import VHeader from "./v-header/VHeader.vue";
 import MainNav from "./main-nav/MainNav.vue";
 
-let isOpenMenu = ref(false);
-
-function openNav() {
-  isOpenMenu = !isOpenMenu;
-  console.log("click", isOpenMenu);
+export default {
+  components: {VHeader, MainNav, SwitchLang},
+  data() {
+    return {
+      isOpenMenu: false,
+    }
+  },
+  methods: {
+    openNav(){
+      this.isOpenMenu = !this.isOpenMenu
+    }
+  }
 }
+
 </script>
 <template>
   <section class="section-nav" :class="{ 'section-nav--active': isOpenMenu }">

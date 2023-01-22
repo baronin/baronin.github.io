@@ -1,21 +1,14 @@
-
-<script setup>
+<script>
 import SectionNav from "./components/section-nav/SectionNav.vue";
 import MainHeader from "./components/main-header/MainHeader.vue";
-import SwitchLang from "./components/switch-lang/SwitchLang.vue";
-import SectionAbout from "./components/section-about/SectionAbout.vue";
-import SectionSkills from "./components/section-skills/SectionSkills.vue";
 import MainFooter from "./components/main-footer/MainFooter.vue";
-import { useI18n } from "vue-i18n";
 
-const { t } = useI18n({
-  inheritLocale: true,
-  useScope: "local",
-});
+export default {
+  components: {SectionNav, MainHeader, MainFooter},
+};
 </script>
 
 <template>
-  <!-- end switch lang -->
   <div class="overlay"></div>
   <section-nav></section-nav>
 
@@ -28,13 +21,7 @@ const { t } = useI18n({
     <!-- main -->
     <main class="main">
       <div class="container">
-        <!-- about -->
-        <section-about />
-        <!-- end about -->
-
-        <!-- skills -->
-        <section-skills />
-        <!-- end "skills -->
+        <router-view></router-view>
       </div>
     </main>
     <!-- end main -->
