@@ -1,12 +1,10 @@
 <template>
   <nav class="main-nav">
-    <a class="main-nav__link" href="/">{{ $t("main-nav__home") }}</a>
-    <a class="main-nav__link" href="/blog/">{{ $t("main-nav__blog") }}</a>
-    <a class="main-nav__link" href="/projects/">{{
-      $t("main-nav__projects")
-    }}</a>
-    <a class="main-nav__link" href="/about/">{{ $t("main-nav__about") }}</a>
-    <a class="main-nav__link" href="/contact/">{{ $t("main-nav__contact") }}</a>
+    <router-link class="main-nav__link" to="/">{{ $t("main-nav__home") }}</router-link>
+    <!--    <a class="main-nav__link" href="/blog/">{{ $t("main-nav__blog") }}</a>-->
+    <router-link class="main-nav__link" to="/projects">{{$t("main-nav__projects")}}</router-link>
+    <!--    <a class="main-nav__link" href="/about/">{{ $t("main-nav__about") }}</a>-->
+    <!--    <a class="main-nav__link" href="/contact/">{{ $t("main-nav__contact") }}</a>-->
     <!-- <a href="/assets/CV/Yaroslav'sResume.pdf"
      download="Yaroslav's Resume"
      target="_blank"
