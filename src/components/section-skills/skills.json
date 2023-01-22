@@ -1,0 +1,20 @@
+{
+  "development": [
+    "HTML coding",
+    "Programming languages",
+    "Libraries",
+    "Automation",
+    "Packet Manager",
+    "Tools",
+    "Git"
+  ],
+  "webdesign": ["Photoshop", "Figma"],
+  "markup": ["HTML", "CSS3/SCSS", "TWIG/PUG", "BOOTSTRAP/BULMA"],
+  "language": ["JavaScript/TypeScript", "PHP"],
+  "library": ["jQuery", "React", "Axios"],
+  "framework": ["Vue"],
+  "automation": ["Gulp", "Webpack"],
+  "packetManager": ["npm", "yarn"],
+  "tools": ["Webstorm", "Postman", "VsCode"],
+  "git": ["GitHub", "Gitlab", "Bitbucket"]
+}
