@@ -8,7 +8,7 @@ const languages = ref([
   { language: "ua", title: "UA" },
 ]);
 
-const selected = ref([{ language: "en", title: "EN" }]);
+const selected = ref([{ language: "ua", title: "UA" }]);
 
 const { t } = useI18n({
   inheritLocale: true,
