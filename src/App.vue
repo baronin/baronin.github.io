@@ -1,35 +1,37 @@
 <script>
+import { Suspense } from "vue";
+
 import SectionNav from "./components/section-nav/SectionNav.vue";
 import MainHeader from "./components/main-header/MainHeader.vue";
 import MainFooter from "./components/main-footer/MainFooter.vue";
 
 export default {
-  components: {SectionNav, MainHeader, MainFooter},
+  components: {Suspense, SectionNav, MainHeader, MainFooter},
 };
 </script>
 
 <template>
   <div class="overlay"></div>
-  <section-nav></section-nav>
-
-  <!-- wrapper -->
-  <div class="wrapper">
-    <!-- header -->
-    <main-header />
-    <!-- end header -->
-
-    <!-- main -->
-    <main class="main">
-      <div class="container">
-        <router-view></router-view>
+  <Suspense>
+    <template #default>
+      <div>
+        <section-nav></section-nav>
+        <div class="wrapper">
+          <main-header />
+          <main class="main">
+            <div class="container">
+              <router-view></router-view>
+            </div>
+          </main>
+          <main-footer />
+        </div>
       </div>
-    </main>
-    <!-- end main -->
-
-    <!-- footer -->
-    <main-footer />
-    <!-- end footer -->
-  </div>
+    </template>
+    <template #fallback>
+      <!-- Загрузочное состояние или индикатор загрузки -->
+      <div>Loading...</div>
+    </template>
+  </Suspense>
 </template>
 
 <style lang="scss">
