@@ -181,12 +181,12 @@ const updateUserById = async (user) => {
       </div>
     </div>
     <hr>
-    <h2>Жильцы дома</h2>
     <div class="mb-4">
       <button class="button" @click="createFakeUsers">Создать фейковых жильцов</button>
       <p class="mt-1 has-text-danger">{{errorsCreateUsersFake}}</p>
     </div>
-    <table class="table is-bordered is-hoverable is-narrow">
+    <table  v-if="users.length" class="table is-bordered is-hoverable is-narrow">
+      <caption>Жильцы дома</caption>
       <thead>
         <tr>
           <th class="is-1 mr-1">Квартира</th>
@@ -284,6 +284,7 @@ const updateUserById = async (user) => {
         </tr>
       </tbody>
     </table>
+    <div v-else>Список жильцов пока пуск</div>
   </div>
 </template>
 

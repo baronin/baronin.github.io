@@ -1,11 +1,12 @@
 import { ref } from "vue";
+const API_URL = 'http://localhost:4004/api'
 
 export async function getUsers() {
   const data = ref(null);
   const error = ref(null);
 
   try {
-    const response = await fetch('http://localhost:8080/api/user');
+    const response = await fetch(`${API_URL}/user`);
     const users = await response.json();
     data.value = users;
   } catch (err) {
@@ -19,7 +20,7 @@ export async function createUser(user) {
   const error = ref(null);
 
   try {
-    const response = await fetch('http://localhost:8080/api/user', {
+    const response = await fetch(`${API_URL}/user`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
@@ -47,7 +48,7 @@ export async function createFakeUsers() {
   const error = ref(null);
 
   try {
-    const response = await fetch('http://localhost:8080/api/create-users', {
+    const response = await fetch(`${API_URL}/create-users`, {
       method: 'POST'
     });
     const users = await response.json();
@@ -63,7 +64,7 @@ export async function removeUserById(id) {
   const error = ref(null);
 
   try {
-    const response = await fetch('http://localhost:8080/api/user', {
+    const response = await fetch(`${API_URL}/user`, {
       method: 'DELETE',
       credentials: "same-origin",
       headers: {
@@ -89,7 +90,7 @@ export async function updateUser(user) {
   console.log('updateUser', user);
   const error = ref(null);
   try {
-    const response = await fetch('http://localhost:8080/api/user', {
+    const response = await fetch(`${API_URL}/user`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
