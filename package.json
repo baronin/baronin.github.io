@@ -1,9 +1,9 @@
 {
-  "name": "-baronin-github-io",
+  "name": "baronin-github-io",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "nuxi dev",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -11,25 +11,15 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "format": "prettier .  --write"
   },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.0",
-    "@intlify/unplugin-vue-i18n": "^0.8.1",
-    "bulma": "^0.9.4",
-    "vue": "^3.2.45",
-    "vue-i18n": "^9.2.2",
-    "vue-router": "^4.1.6"
-  },
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/eslint-parser": "^7.19.1",
-    "@vitejs/plugin-vue": "^4.0.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-vue": "^9.8.0",
     "gh-pages": "^5.0.0",
+    "nuxt": "^3.8.1",
     "prettier": "2.8.2",
-    "sass": "^1.57.1",
-    "vite": "^4.0.0",
-    "vite-plugin-pwa": "^0.14.1"
+    "sass": "^1.69.5"
   }
 }
