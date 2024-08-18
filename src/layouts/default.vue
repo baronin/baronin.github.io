@@ -1,18 +1,18 @@
 <template>
   <div class="app">
-    <header>
-      <slot name="header">
-        Default header content
-      </slot>
-    </header>
+    <the-header />
     <main>
       <slot />
     </main>
   </div>
 </template>
-<style lang="scss">
 
-
-</style>
 <script setup>
+import TheHeader from "../components/layouts/the-header/TheHeader.vue";
 </script>
+
+<style>
+.app {
+  background-color: #272727;
+}
+</style>
