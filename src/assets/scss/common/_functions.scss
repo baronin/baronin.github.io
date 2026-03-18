@@ -1,5 +1,3 @@
-@import "vars";
-
 @function val($map, $keys...) {
 
   @if nth($keys, 1) == null {

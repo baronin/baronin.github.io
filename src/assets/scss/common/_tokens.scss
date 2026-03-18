@@ -1,0 +1,127 @@
+// ============================================================
+// CSS Custom Properties (design tokens)
+// Included ONCE via main.scss — never via additionalData
+// ============================================================
+
+:root {
+  // Background
+  --background: #F2F3F0;
+  --foreground: #111111;
+
+  // Primary
+  --primary: #FF8400;
+  --primary-foreground: #111111;
+
+  // Secondary
+  --secondary: #E7E8E5;
+  --secondary-foreground: #111111;
+
+  // Accent
+  --accent: #F2F3F0;
+  --accent-foreground: #111111;
+
+  // Card
+  --card: #FFFFFF;
+  --card-foreground: #111111;
+
+  // Popover
+  --popover: #FFFFFF;
+  --popover-foreground: #111111;
+
+  // Muted
+  --muted: #F2F3F0;
+  --muted-foreground: #666666;
+
+  // Borders & Input
+  --border: #CBCCC9;
+  --input: #CBCCC9;
+  --ring: #666666;
+
+  // Destructive
+  --destructive: #D93C15;
+
+  // Status — Error
+  --color-error: #E5DCDA;
+  --color-error-foreground: #8C1C00;
+
+  // Status — Info
+  --color-info: #DFDFE6;
+  --color-info-foreground: #000066;
+
+  // Status — Success
+  --color-success: #DFE6E1;
+  --color-success-foreground: #004D1A;
+
+  // Status — Warning
+  --color-warning: #E9E3D8;
+  --color-warning-foreground: #804200;
+
+  // Sidebar
+  --sidebar: #E7E8E5;
+  --sidebar-foreground: #666666;
+  --sidebar-accent: #CBCCC9;
+  --sidebar-accent-foreground: #18181b;
+  --sidebar-border: #CBCCC9;
+  --sidebar-primary: #18181b;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-ring: #71717a;
+
+  // Static colors
+  --white: #FFFFFF;
+  --black: #000000;
+
+  // Border radius
+  --radius-none: 0px;
+  --radius-m: 16px;
+  --radius-pill: 999px;
+}
+
+.dark {
+  --background: #111111;
+  --foreground: #FFFFFF;
+
+  --primary: #FF8400;
+  --primary-foreground: #111111;
+
+  --secondary: #2E2E2E;
+  --secondary-foreground: #FFFFFF;
+
+  --accent: #111111;
+  --accent-foreground: #F2F3F0;
+
+  --card: #1A1A1A;
+  --card-foreground: #FFFFFF;
+
+  --popover: #1A1A1A;
+  --popover-foreground: #FFFFFF;
+
+  --muted: #2E2E2E;
+  --muted-foreground: #B8B9B6;
+
+  --border: #2E2E2E;
+  --input: #2E2E2E;
+  --ring: #666666;
+
+  --destructive: #FF5C33;
+
+  --color-error: #24100B;
+  --color-error-foreground: #FF5C33;
+
+  --color-info: #222229;
+  --color-info-foreground: #B2B2FF;
+
+  --color-success: #222924;
+  --color-success-foreground: #B6FFCE;
+
+  --color-warning: #291C0F;
+  --color-warning-foreground: #FF8400;
+
+  --sidebar: #18181b;
+  --sidebar-foreground: #fafafa;
+  --sidebar-accent: #2a2a30;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: #ffffff1a;
+  --sidebar-primary: #18181b;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-ring: #71717a;
+}
