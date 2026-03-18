@@ -1,18 +1,14 @@
 <script>
-import SectionAbout from "../components/section-about/SectionAbout.vue";
-import SectionSkills from "../components/section-skills/SectionSkills.vue";
+import AppHero from '@/components/AppHero.vue';
 
 export default {
-  components: { SectionAbout, SectionSkills },
+  name: 'IndexPage',
+  components: { AppHero },
 };
 </script>
 
 <template>
-  <!-- about -->
-  <section-about />
-  <!-- end about -->
-
-  <!-- skills -->
-  <section-skills />
-  <!-- end "skills -->
+  <main>
+    <AppHero />
+  </main>
 </template>

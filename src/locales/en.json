@@ -1,4 +1,10 @@
 {
+  "theme__to_dark":  "Switch to dark mode",
+  "theme__to_light": "Switch to light mode",
+  "hero__lang":      "Switch language",
+  "hero__title": "Full Stack Developer & Designer",
+  "hero__bio":   "Building elegant solutions with clean code",
+
   "main-nav__home": "Home",
   "main-nav__blog": "Blog",
   "main-nav__projects": "Projects",

@@ -1,4 +1,10 @@
 {
+  "theme__to_dark":  "Темна тема",
+  "theme__to_light": "Світла тема",
+  "hero__lang":      "Змінити мову",
+  "hero__title": "Full Stack розробник та дизайнер",
+  "hero__bio":   "Будую елегантні рішення з чистим кодом",
+
   "main-nav__home": "Головна",
   "main-nav__blog": "Блог",
   "main-nav__projects": "Проекти",
