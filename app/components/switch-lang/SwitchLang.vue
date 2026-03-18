@@ -8,12 +8,12 @@ const languages = ref([
   { language: "ua", title: "UA" },
 ]);
 
-const selected = ref([{ language: "ua", title: "UA" }]);
-
-const { t } = useI18n({
-  inheritLocale: true,
-  useScope: "local",
-});
+// const selected = ref([{ language: "ua", title: "UA" }]);
+//
+// const { t } = useI18n({
+//   inheritLocale: true,
+//   useScope: "local",
+// });
 const changeLocale = (locale) => {
   i18n.global.locale.value = locale;
 };
