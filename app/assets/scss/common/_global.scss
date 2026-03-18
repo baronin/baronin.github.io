@@ -29,7 +29,7 @@ input,
 textarea,
 button,
 select {
-  color: $color-white;
+  color: _palette(font-primary);
   font-family: $font-family-base;
   font-display: swap;
   font-size: $font-size-default;
@@ -49,7 +49,7 @@ select {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: _palette(font-color);
+  color: _palette(font-primary);
   font-weight: 700;
   line-height: 1em;
   margin: 0 0 0.5625em 0;

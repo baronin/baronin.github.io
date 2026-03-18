@@ -5,6 +5,6 @@
 
 <script>
 export default {
-  name: "projects"
+  name: "MyProjects"
 };
 </script>

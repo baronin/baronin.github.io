@@ -2,14 +2,7 @@ module.exports = {
   env: {
     node: true,
   },
-  parser: "@babel/eslint-parser",
-  parserOptions: {
-    sourceType: "module",
-    allowImportExportEverywhere: false,
-    ecmaFeatures: {
-      globalReturn: false,
-    },
-  },
+  parser: "vue-eslint-parser",
   extends: [
     "eslint:recommended",
     "plugin:vue/vue3-recommended",

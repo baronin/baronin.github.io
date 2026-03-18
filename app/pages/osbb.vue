@@ -1,115 +1,116 @@
 <script setup>
-import { api } from "@/api/index.js";
-import { ref, onMounted } from "vue";
-import TextField from "@/components/text-field.vue";
-
-const users = ref([]);
-const usersError = ref([]);
-const errorsCreateUsersFake = ref('');
-const isModalActive = ref(false);
-const newUser = ref({
-  name: "",
-  email: "",
-  phone: "",
-  room: "",
-  floor: "",
-});
-
-const errorNewUser = ref([]);
-
-const onChangeField = (user, field, event) => {
-  user[field] = event.target.value;
-};
-
-onMounted(async () => {
-  try {
-    const { data, error } = await api.getUsers();
-    users.value = data.value.map((user) => ({ ...user, isChange: false }));
-    usersError.value = error;
-  } catch (error) {
-    console.log(error.message);
-    usersError.value = error.message;
-  }
-});
-
-const createUser = async () => {
-  errorNewUser.value.splice(0, errorNewUser.value.length);
-
-  const { name, email, phone, room, floor } = newUser.value;
-  if (!(name || email || phone || room || floor)) {
-    errorNewUser.value.push("Введите все поля");
-    return;
-  }
-
-  try {
-    const { data, error } = await api.createUser(newUser.value);
-    if (error.value) {
-      errorNewUser.value.push(error.value);
-      return;
-    }
-    users.value.unshift(newUser.value);
-  } catch (error) {
-    console.log(error);
-  } finally {
-    newUser.value = {
-      name: "",
-      email: "",
-      phone: "",
-      room: "",
-      floor: "",
-    };
-    isModalActive.value = false;
-  }
-};
-
-const createFakeUsers = async () => {
-  const { data, error } = await api.createFakeUsers();
-  if (data.value.length) users.value.unshift(...data.value)
-  if (data.value.error) errorsCreateUsersFake.value = data.value.error;
-};
-
-const deleteUserById = async (userId) => {
-  try {
-    const index = users.value.findIndex((user) => user.id === userId);
-    if (index !== -1) {
-      await api.removeUserById(userId);
-      users.value.splice(index, 1);
-    } else {
-      console.error("Пользователь не найден");
-    }
-  } catch (error) {
-    // Обработка ошибки удаления пользователя
-    console.error("Ошибка при удалении пользователя:", error.message);
-  }
-};
-
-const toggleEditMode = async (user) => {
-  users.value = users.value.map((u) => ({
-    ...u,
-    isChange: u.id === user.id,
-  }));
-};
-const updateUserById = async (user) => {
-  users.value = users.value.map((u) => {
-    if (u.isChange) {
-      const updatedUser = {
-        id: u.id,
-        room: u.room,
-        floor: u.floor,
-        name: u.name,
-        phone: u.phone,
-        email: u.email,
-      };
-      api.updateUser(updatedUser).catch(() => console.log("Не удалось обновить данные пользователя"));
-      return { ...u, isChange: false };
-    }
-    return u;
-  });
-};
+// import { api } from "@/api/index.js";
+// import { ref, onMounted } from "vue";
+// import TextField from "@/components/text-field.vue";
+//
+// const users = ref([]);
+// const usersError = ref([]);
+// const errorsCreateUsersFake = ref("");
+// const isModalActive = ref(false);
+// const newUser = ref({
+//   name: "",
+//   email: "",
+//   phone: "",
+//   room: "",
+//   floor: "",
+// });
+//
+// const errorNewUser = ref([]);
+//
+// const onChangeField = (user, field, event) => {
+//   user[field] = event.target.value;
+// };
+//
+// onMounted(async () => {
+//   try {
+//     const { data, error } = await api.getUsers();
+//     users.value = data.value.map((user) => ({ ...user, isChange: false }));
+//     usersError.value = error;
+//   } catch (error) {
+//     console.log(error.message);
+//     usersError.value = error.message;
+//   }
+// });
+//
+// const createUser = async () => {
+//   errorNewUser.value.splice(0, errorNewUser.value.length);
+//
+//   const { name, email, phone, room, floor } = newUser.value;
+//   if (!(name || email || phone || room || floor)) {
+//     errorNewUser.value.push("Введите все поля");
+//     return;
+//   }
+//
+//   try {
+//     const { data, error } = await api.createUser(newUser.value);
+//     if (error.value) {
+//       errorNewUser.value.push(error.value);
+//       return;
+//     }
+//     users.value.unshift(newUser.value);
+//   } catch (error) {
+//     console.log(error);
+//   } finally {
+//     newUser.value = {
+//       name: "",
+//       email: "",
+//       phone: "",
+//       room: "",
+//       floor: "",
+//     };
+//     isModalActive.value = false;
+//   }
+// };
+//
+// const createFakeUsers = async () => {
+//   const { data, error } = await api.createFakeUsers();
+//   if (data.value.length) users.value.unshift(...data.value);
+//   if (data.value.error) errorsCreateUsersFake.value = data.value.error;
+// };
+//
+// const deleteUserById = async (userId) => {
+//   try {
+//     const index = users.value.findIndex((user) => user.id === userId);
+//     if (index !== -1) {
+//       await api.removeUserById(userId);
+//       users.value.splice(index, 1);
+//     } else {
+//       console.error("Пользователь не найден");
+//     }
+//   } catch (error) {
+//     // Обработка ошибки удаления пользователя
+//     console.error("Ошибка при удалении пользователя:", error.message);
+//   }
+// };
+//
+// const toggleEditMode = async (user) => {
+//   users.value = users.value.map((u) => ({
+//     ...u,
+//     isChange: u.id === user.id,
+//   }));
+// };
+// const updateUserById = async (user) => {
+//   users.value = users.value.map((u) => {
+//     if (u.isChange) {
+//       const updatedUser = {
+//         id: u.id,
+//         room: u.room,
+//         floor: u.floor,
+//         name: u.name,
+//         phone: u.phone,
+//         email: u.email,
+//       };
+//       api.updateUser(updatedUser).catch(() => console.log("Не удалось обновить данные пользователя"));
+//       return { ...u, isChange: false };
+//     }
+//     return u;
+//   });
+// };
 </script>
 
 <template>
-  <div class="content">
+  <div>
+    <!--  <div class="content">
     <div>
       <h4 class="mt-5">Добавить жильца</h4>
       <button type="button" class="button is-primary" @click="isModalActive = true">add</button>
@@ -285,6 +286,7 @@ const updateUserById = async (user) => {
       </tbody>
     </table>
     <div v-else>Список жильцов пока пуск</div>
+  </div>-->
   </div>
 </template>
 
