@@ -1,12 +1,17 @@
-<script setup>
-import AppHero from "@/components/AppHero.vue";
+<script>
+export default {
+  name: 'App',
+};
 </script>
 
 <template>
-  <div>
-    <app-hero />
-  </div>
+  <RouterView />
 </template>
 
 <style lang="scss">
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: _font(secondary);
+}
 </style>

@@ -5,6 +5,21 @@
   "hero__title": "Full Stack Developer & Designer",
   "hero__bio":   "Building elegant solutions with clean code",
 
+  "contact__label": "Get in touch",
+  "contact__text":  "Interested in working together? Let's connect and build something great.",
+  "contact__btn":   "Send Message",
+
+  "projects__label": "Projects",
+  "experience__label": "Experience",
+
+  "about__label": "About me",
+  "about__text":  "Passionate about creating beautiful and functional web applications. With 5+ years of experience in full-stack development, I specialize in building scalable, user-centric solutions that bridge design and engineering.",
+
+  "footer__about":    "About",
+  "footer__projects": "Projects",
+  "footer__skills":   "Skills",
+  "footer__contact":  "Contact",
+
   "main-nav__home": "Home",
   "main-nav__blog": "Blog",
   "main-nav__projects": "Projects",

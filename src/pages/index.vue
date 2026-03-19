@@ -1,14 +1,23 @@
 <script>
+import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import AppHero from '@/components/AppHero.vue';
+import AppAbout from '@/components/AppAbout.vue';
+import AppExperience from '@/components/AppExperience.vue';
+import AppProjects from '@/components/AppProjects.vue';
+import AppContact from '@/components/AppContact.vue';
 
 export default {
   name: 'IndexPage',
-  components: { AppHero },
+  components: { DefaultLayout, AppHero, AppAbout, AppExperience, AppProjects, AppContact },
 };
 </script>
 
 <template>
-  <main>
+  <DefaultLayout>
     <AppHero />
-  </main>
+    <AppAbout />
+    <AppExperience />
+    <AppProjects />
+    <AppContact />
+  </DefaultLayout>
 </template>
