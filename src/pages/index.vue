@@ -13,7 +13,9 @@ export default {
 
 <template>
   <DefaultLayout>
-    <AppHero />
+    <template #sidebar>
+      <AppHero />
+    </template>
     <AppAbout />
     <AppExperience />
     <!-- <AppProjects />-->

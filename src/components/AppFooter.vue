@@ -12,8 +12,8 @@ export default {
       today: new Date().getFullYear(),
       nav: [
         { key: "footer__about", href: "#about" },
-        { key: "footer__projects", href: "#projects" },
-        { key: "footer__skills", href: "#skills" },
+        // { key: "footer__projects", href: "#projects" },
+        // { key: "footer__skills", href: "#skills" },
         { key: "footer__contact", href: "#contact" },
       ],
     };

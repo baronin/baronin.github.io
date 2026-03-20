@@ -17,25 +17,25 @@ export default {
 </script>
 
 <template>
-  <section class="contact">
+  <section id="contact" class="contact">
     <AppContainer>
-    <div class="contact__header">
-      <i class="fa-regular fa-envelope contact__icon" />
-      <span class="contact__label">{{ $t('contact__label') }}</span>
-    </div>
+      <div class="contact__header">
+        <i class="fa-regular fa-envelope contact__icon" />
+        <span class="contact__label">{{ $t('contact__label') }}</span>
+      </div>
 
-    <div class="contact__card">
-      <p class="contact__text">{{ $t('contact__text') }}</p>
+      <div class="contact__card">
+        <p class="contact__text">{{ $t('contact__text') }}</p>
 
-      <a :href="`mailto:${email}`" class="contact__email">{{ email }}</a>
+        <a :href="`mailto:${email}`" class="contact__email">{{ email }}</a>
 
-      <a :href="`mailto:${email}`" class="contact__btn">
-        <i class="fa-regular fa-paper-plane contact__btn-icon" />
-        <span>{{ $t('contact__btn') }}</span>
-      </a>
+        <a :href="`mailto:${email}`" class="contact__btn">
+          <i class="fa-regular fa-paper-plane contact__btn-icon" />
+          <span>{{ $t('contact__btn') }}</span>
+        </a>
 
-      <AppSocialList :socials="socials" variant="circle" />
-    </div>
+        <AppSocialList :socials="socials" variant="circle" />
+      </div>
     </AppContainer>
   </section>
 </template>
@@ -48,6 +48,10 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @include desktop {
+      align-items: center;
+    }
   }
 
   &__header {
@@ -83,6 +87,17 @@ export default {
     flex-direction: column;
     align-items: center;
     gap: 16px;
+
+    @include mobile {
+      padding: 32px 28px;
+    }
+
+    @include desktop {
+      max-width: 480px;
+      width: 100%;
+      align-self: flex-start;
+      margin: 0 auto;
+    }
   }
 
   &__text {
@@ -114,7 +129,7 @@ export default {
     width: 100%;
     padding: 14px 20px;
     border-radius: var(--radius-pill);
-    background: linear-gradient(to right, #FF8400, #FF5C33);
+    background: linear-gradient(to right, #ff8400, #ff5c33);
     text-decoration: none;
     transition: opacity 0.2s;
 
@@ -126,15 +141,13 @@ export default {
       font-family: _font(primary);
       font-size: 13px;
       font-weight: 600;
-      color: #FFFFFF;
+      color: #ffffff;
     }
   }
 
   &__btn-icon {
     font-size: 16px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
-
-
 }
 </style>

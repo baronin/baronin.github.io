@@ -40,24 +40,36 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 0;
+  padding: 32px 20px;
   background-color: var(--background);
+
+  @include mobile {
+    padding: 40px 20px;
+  }
+
+  @include desktop {
+    align-items: flex-start;
+    padding: 40px 32px;
+    min-height: 100vh;
+    gap: 12px;
+    justify-content: flex-start;
+  }
 
   &__controls {
     position: absolute;
     top: 32px;
     right: 20px;
-
-    @include tablet {
-      right: 40px;
-    }
-
-    @include wide-width {
-      right: 80px;
-    }
     display: flex;
     align-items: center;
     gap: 10px;
+
+    @include mobile {
+      top: 40px;
+    }
+
+    @include desktop {
+      right: 32px;
+    }
   }
 
   &__avatar {
@@ -66,6 +78,17 @@ export default {
     border-radius: var(--radius-pill);
     overflow: hidden;
     margin-bottom: 16px;
+
+    @include mobile {
+      width: 120px;
+      height: 120px;
+    }
+
+    @include desktop {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 0;
+    }
 
     img {
       width: 100%;
@@ -81,6 +104,16 @@ export default {
     color: var(--foreground);
     text-align: center;
     margin: 0 0 16px;
+
+    @include mobile {
+      font-size: 28px;
+    }
+
+    @include desktop {
+      font-size: 20px;
+      text-align: left;
+      margin: 0;
+    }
   }
 
   &__title {
@@ -89,6 +122,12 @@ export default {
     color: var(--muted-foreground);
     text-align: center;
     margin: 0 0 16px;
+
+    @include desktop {
+      font-size: 13px;
+      text-align: left;
+      margin: 0;
+    }
   }
 
   &__bio {
@@ -97,8 +136,12 @@ export default {
     color: var(--muted-foreground);
     text-align: center;
     margin: 0 0 16px;
+
+    @include desktop {
+      text-align: left;
+      font-size: 12px;
+      margin: 0;
+    }
   }
-
-
 }
 </style>

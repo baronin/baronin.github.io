@@ -128,6 +128,10 @@ export default {
     font-size: 14px;
     font-weight: 600;
     color: var(--foreground);
+
+    @include mobile {
+      font-size: 15px;
+    }
   }
 
   &__company {

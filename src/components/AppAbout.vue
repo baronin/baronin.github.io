@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <section class="about">
+  <section id="about" class="about">
     <AppContainer>
       <span class="about__label">{{ $t('about__label') }}</span>
       <p class="about__text">{{ $t('about__text') }}</p>
@@ -40,6 +40,10 @@ export default {
     font-size: 13px;
     line-height: 1.65;
     color: var(--foreground);
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 }
 </style>
