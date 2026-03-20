@@ -4,12 +4,16 @@ import en from '../locales/en.json';
 import ua from '../locales/ua.json';
 import ru from '../locales/ru.json';
 
+const availableLocales = ['en', 'ua', 'ru'];
+const savedLocale = localStorage.getItem('locale');
+const locale = availableLocales.includes(savedLocale) ? savedLocale : 'en';
+
 const i18n = createI18n({
   legacy: false,
   globalInjection: true,
-  locale: 'ua',
+  locale,
   fallbackLocale: 'en',
-  availableLocales: ['en', 'ua', 'ru'],
+  availableLocales,
   messages: { en, ua, ru },
 });
 

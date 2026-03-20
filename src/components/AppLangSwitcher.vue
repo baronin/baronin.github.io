@@ -40,6 +40,7 @@ export default {
 
     select(locale) {
       this.$i18n.locale = locale;
+      localStorage.setItem('locale', locale);
       this.isOpen = false;
     },
 
