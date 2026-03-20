@@ -1,18 +1,24 @@
 <script>
-import SectionAbout from "../components/section-about/SectionAbout.vue";
-import SectionSkills from "../components/section-skills/SectionSkills.vue";
+import DefaultLayout from '@/layouts/DefaultLayout.vue';
+import AppHero from '@/components/AppHero.vue';
+import AppAbout from '@/components/AppAbout.vue';
+import AppExperience from '@/components/AppExperience.vue';
+import AppContact from '@/components/AppContact.vue';
 
 export default {
-  components: { SectionAbout, SectionSkills },
+  name: 'IndexPage',
+  components: { DefaultLayout, AppHero, AppAbout, AppExperience, AppContact },
 };
 </script>
 
 <template>
-  <!-- about -->
-  <section-about />
-  <!-- end about -->
-
-  <!-- skills -->
-  <section-skills />
-  <!-- end "skills -->
+  <DefaultLayout>
+    <template #sidebar>
+      <AppHero />
+    </template>
+    <AppAbout />
+    <AppExperience />
+    <!-- <AppProjects />-->
+    <AppContact />
+  </DefaultLayout>
 </template>
