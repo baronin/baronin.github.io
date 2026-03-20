@@ -1,19 +1,20 @@
 <script>
-import AppLangSwitcher from '@/components/AppLangSwitcher.vue';
-import AppContainer from '@/components/AppContainer.vue';
+import AppLangSwitcher from "@/components/AppLangSwitcher.vue";
+import AppContainer from "@/components/AppContainer.vue";
 
 export default {
-  name: 'AppFooter',
+  name: "AppFooter",
 
   components: { AppLangSwitcher, AppContainer },
 
   data() {
     return {
+      today: new Date().getFullYear(),
       nav: [
-        { key: 'footer__about',    href: '#about'    },
-        { key: 'footer__projects', href: '#projects' },
-        { key: 'footer__skills',   href: '#skills'   },
-        { key: 'footer__contact',  href: '#contact'  },
+        { key: "footer__about", href: "#about" },
+        { key: "footer__projects", href: "#projects" },
+        { key: "footer__skills", href: "#skills" },
+        { key: "footer__contact", href: "#contact" },
       ],
     };
   },
@@ -34,17 +35,12 @@ export default {
       </div>
 
       <nav class="footer__nav">
-        <a
-          v-for="item in nav"
-          :key="item.key"
-          :href="item.href"
-          class="footer__nav-link"
-        >{{ $t(item.key) }}</a>
+        <a v-for="item in nav" :key="item.key" :href="item.href" class="footer__nav-link">{{ $t(item.key) }}</a>
       </nav>
 
       <div class="footer__meta">
         <span class="footer__built">Built with Vue.js · Designed in Pencil</span>
-        <span class="footer__copy">© 2024 Yaroslav Baronin. All rights reserved.</span>
+        <span class="footer__copy">© {{ today }} Yaroslav Baronin. All rights reserved.</span>
       </div>
     </AppContainer>
   </footer>

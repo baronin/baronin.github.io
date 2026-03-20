@@ -1,14 +1,13 @@
 <script>
 import AppThemeToggle from '@/components/AppThemeToggle.vue';
 import AppLangSwitcher from '@/components/AppLangSwitcher.vue';
-import AppContainer from '@/components/AppContainer.vue';
 import AppSocialList from '@/components/AppSocialList.vue';
 import { socials } from '@/constants/socials.js';
 
 export default {
   name: 'AppHero',
 
-  components: { AppThemeToggle, AppLangSwitcher, AppContainer, AppSocialList },
+  components: { AppThemeToggle, AppLangSwitcher, AppSocialList },
 
   data() {
     return { socials };

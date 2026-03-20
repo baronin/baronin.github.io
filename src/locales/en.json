@@ -11,6 +11,12 @@
 
   "projects__label": "Projects",
   "experience__label": "Experience",
+  "experience__0__description": "Leading frontend architecture and development of a SaaS platform for the logistics industry. Driving Vue 3 + TypeScript adoption, improving Core Web Vitals, and establishing component library and code review practices.",
+  "experience__1__description": "Built and maintained core product features from scratch. Developed reusable component systems, integrated REST APIs, and collaborated closely with product and design teams in an Agile environment.",
+  "experience__2__description": "Delivered pixel-perfect UIs across multiple client projects in various domains. Worked in cross-functional remote teams with a focus on performance, accessibility, and clean code.",
+  "experience__3__description": "Mentored junior developers through their first commercial-grade projects. Conducted code reviews and knowledge-sharing sessions on JavaScript, Vue.js, and frontend best practices.",
+  "experience__4__description": "Developed features for travel-tech R&D products in a research-driven engineering culture. Focused on performance, maintainability, and working within fast-paced iterative cycles.",
+  "experience__5__description": "Started professional career building landing pages and UI components. Gained foundational skills in HTML, CSS, JavaScript, and responsive layout techniques.",
 
   "about__label": "About me",
   "about__text":  "Passionate about creating beautiful and functional web applications. With 5+ years of experience in full-stack development, I specialize in building scalable, user-centric solutions that bridge design and engineering.",

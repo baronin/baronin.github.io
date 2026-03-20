@@ -9,7 +9,7 @@ export default {
 
   data() {
     return {
-      email: 'yaroslav@baronin.dev',
+      email: 'baronin.dev@gmail.com',
       socials,
     };
   },

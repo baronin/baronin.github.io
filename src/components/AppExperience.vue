@@ -1,16 +1,19 @@
 <script>
-import AppContainer from '@/components/AppContainer.vue';
+import AppContainer from "@/components/AppContainer.vue";
 
 export default {
-  name: 'AppExperience',
+  name: "AppExperience",
   components: { AppContainer },
 
   data() {
     return {
-      items: [
-        { date: '2021 — Present', role: 'Senior Developer',      company: 'TechCorp'  },
-        { date: '2019 — 2021',    role: 'Full Stack Developer',  company: 'WebStudio' },
-        { date: '2017 — 2019',    role: 'Junior Developer',      company: 'StartupLab' },
+      experience: [
+        { date: "2023 — Present", role: "Frontend Web Developer", company: "Lemonbit B.V." },
+        { date: "2022 — 2023", role: "Frontend Developer", company: "Lemonbit B.V." },
+        { date: "2021 — 2022", role: "Alumni Mentor", company: "Beetroot Academy" },
+        { date: "2020 — 2022", role: "Frontend Developer", company: "Beetroot – Sustainable Software Development" },
+        { date: "2019 — 2020", role: "Software Engineer", company: "AltexSoft" },
+        { date: "2018", role: "Trainee Frontend Developer", company: "Isv7 Studio" },
       ],
     };
   },
@@ -20,27 +23,28 @@ export default {
 <template>
   <section class="experience">
     <AppContainer>
-    <span class="experience__label">{{ $t('experience__label') }}</span>
+      <span class="experience__label">{{ $t("experience__label") }}</span>
 
-    <ul class="experience__list">
-      <li
-        v-for="(item, index) in items"
-        :key="index"
-        class="experience__item"
-        :class="{ 'experience__item--last': index === items.length - 1 }"
-      >
-        <div class="experience__timeline">
-          <div class="experience__dot" />
-          <div v-if="index < items.length - 1" class="experience__line" />
-        </div>
+      <ul class="experience__list">
+        <li
+          v-for="(item, index) in experience"
+          :key="index"
+          class="experience__item"
+          :class="{ 'experience__item--last': index === experience.length - 1 }"
+        >
+          <div class="experience__timeline">
+            <div class="experience__dot" />
+            <div v-if="index < experience.length - 1" class="experience__line" />
+          </div>
 
-        <div class="experience__content">
-          <span class="experience__date">{{ item.date }}</span>
-          <strong class="experience__role">{{ item.role }}</strong>
-          <span class="experience__company">{{ item.company }}</span>
-        </div>
-      </li>
-    </ul>
+          <div class="experience__content">
+            <span class="experience__date">{{ item.date }}</span>
+            <strong class="experience__role">{{ item.role }}</strong>
+            <span class="experience__company">{{ item.company }}</span>
+            <p class="experience__description">{{ $t(`experience__${index}__description`) }}</p>
+          </div>
+        </li>
+      </ul>
     </AppContainer>
   </section>
 </template>
@@ -130,7 +134,17 @@ export default {
     font-family: _font(tertiary);
     font-size: 12px;
     font-weight: 400;
-    color: #64748B;
+    color: #64748b;
+  }
+
+  &__description {
+    font-family: _font(tertiary);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--foreground);
+    opacity: 0.65;
+    margin: 4px 0 0;
+    line-height: 1.6;
   }
 }
 </style>

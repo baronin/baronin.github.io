@@ -3,12 +3,11 @@ import DefaultLayout from '@/layouts/DefaultLayout.vue';
 import AppHero from '@/components/AppHero.vue';
 import AppAbout from '@/components/AppAbout.vue';
 import AppExperience from '@/components/AppExperience.vue';
-import AppProjects from '@/components/AppProjects.vue';
 import AppContact from '@/components/AppContact.vue';
 
 export default {
   name: 'IndexPage',
-  components: { DefaultLayout, AppHero, AppAbout, AppExperience, AppProjects, AppContact },
+  components: { DefaultLayout, AppHero, AppAbout, AppExperience, AppContact },
 };
 </script>
 
@@ -17,7 +16,7 @@ export default {
     <AppHero />
     <AppAbout />
     <AppExperience />
-    <AppProjects />
+    <!-- <AppProjects />-->
     <AppContact />
   </DefaultLayout>
 </template>
