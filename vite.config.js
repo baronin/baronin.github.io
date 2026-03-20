@@ -21,27 +21,15 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg,json,vue,txt,woff2}']
       },
       manifest: {
-        name: 'Portfolio\'s Yaroslav Baronin ',
-        short_name: 'front-end',
-        description: 'Brief description about Yaroslav Baronin',
-        theme_color: '#452a8f2',
-        background_color: "#52a8f2",
-        display: "standalone",
+        name: 'Yaroslav Baronin — Frontend Developer',
+        short_name: 'YB Portfolio',
+        description: 'Frontend Developer with 6+ years of experience. Vue 3, TypeScript, scalable UI.',
+        theme_color: '#111111',
+        background_color: '#111111',
+        display: 'standalone',
         icons: [
-          {
-            src: 'img/icons/icon-192x192.png', sizes: '192×192', type: "image/png"
-          },
-          {
-            src: "img/icons/icon-256X256.png", sizes: "256x256", type:
-              "image/png"
-          },
-          {
-            src: "img/icons/icon-384×384.png",
-            sizes:
-              "384×384",
-            type: "image/png"
-          },
-          { src: 'img/icons/icon-512x512.png', sizes: '512x512', type: "image/png" }
+          { src: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+          { src: '/icon-512x512.png', sizes: '512x512', type: 'image/png' }
         ]
       }
     })],
